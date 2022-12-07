@@ -19,3 +19,7 @@ config/icon="res://Textures/icon.svg"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/handheld/orientation=1
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/multimesh_scatter/plugin.cfg")
