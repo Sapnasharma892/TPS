@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://tw04lspueuqw"]
+[gd_scene load_steps=2 format=3 uid="uid://diltr3x220msx"]
 
-[ext_resource type="ArrayMesh" uid="uid://ctfynhx2iwcyx" path="res://TRES/Bushes/SM_Bush_Small_01.tres" id="1_vgtja"]
+[ext_resource type="ArrayMesh" uid="uid://bnqds50kxsr1f" path="res://TRES/Bushes/SM_Bush_Small_01.tres" id="1_vtdbu"]
 
 [node name="Node3d" type="Node3D"]
 
 [node name="MeshInstance3d" type="MeshInstance3D" parent="."]
-mesh = ExtResource("1_vgtja")
+mesh = ExtResource("1_vtdbu")

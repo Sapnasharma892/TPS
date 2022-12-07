@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://biieit6v4200b"]
+[gd_scene load_steps=2 format=3 uid="uid://b1syde5i6h61q"]
 
-[ext_resource type="ArrayMesh" uid="uid://htenwoifxv0q" path="res://TRES/Bushes/SM_Bush_Medium_03.tres" id="1_nt036"]
+[ext_resource type="ArrayMesh" uid="uid://b2ufmc5sm352b" path="res://TRES/Bushes/SM_Bush_Medium_03.tres" id="1_nt036"]
 
 [node name="Node3d" type="Node3D"]
 

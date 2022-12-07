@@ -1,15 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://bo365smda1tio"]
+[gd_scene load_steps=8 format=3 uid="uid://bo365smda1tio"]
 
 [ext_resource type="Texture2D" uid="uid://brqy4xgqateky" path="res://Textures/Textures_DessertTerrain/Textures_DessertTerrain/Dessert_Color.png" id="1_0d3ep"]
 [ext_resource type="Texture2D" uid="uid://bkbvdco7tdxgy" path="res://Textures/Textures_DessertTerrain/Textures_DessertTerrain/Dessert_Height.png" id="1_dl1wv"]
 [ext_resource type="Shader" path="res://Shader/Heightmap.gdshader" id="3_jymlw"]
 [ext_resource type="Script" path="res://SM_Ground.gd" id="3_o86cm"]
+[ext_resource type="PackedScene" uid="uid://x070ucyecf7k" path="res://TSCN/SM_Tree_Old_01.tscn" id="5_6au8e"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lb54c"]
 render_priority = 0
 shader = ExtResource("3_jymlw")
 _a = ExtResource("1_0d3ep")
-height_ratio = 1800.0
+height_ratio = 700.0
 heightmap = ExtResource("1_dl1wv")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_btwxr"]
@@ -20,12 +21,8 @@ subdivide_depth = 50
 [node name="Node3d" type="Node3D"]
 
 [node name="SM_Ground" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.250194, 0, -0.968196, 0, 1, 0, 0.968196, 0, 0.250194, 1.0664, 0.281796, -0.144424)
+transform = Transform3D(0.250194, 0, -0.968196, 0, 1, 0, 0.968196, 0, 0.250194, 0.294427, -9.91257, -0.144424)
 material_override = SubResource("ShaderMaterial_lb54c")
-transparency = 0.63
-cast_shadow = 0
-extra_cull_margin = 16384.0
-lod_bias = 32.0
 mesh = SubResource("PlaneMesh_btwxr")
 script = ExtResource("3_o86cm")
 
@@ -37,3 +34,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.124954, 3.8147e-06, 0.0127
 [node name="Camera3d" type="Camera3D" parent="."]
 transform = Transform3D(0.00296707, 0, -0.999996, 0, 1, 0, 0.999996, 0, 0.00296707, -0.307208, 0, 0.247091)
 fov = 76.3846
+
+[node name="DirectionalLight3d" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.962529, 0.161346, 0.217959, -0.223322, 0.0156617, 0.974619, 0.153838, -0.986774, 0.0511071, 11.602, 414.111, 0)
+
+[node name="SM_Tree_Old_01" parent="." instance=ExtResource("5_6au8e")]
+transform = Transform3D(0.725026, 0, -0.688722, 0, 1, 0, 0.688721, 0, 0.725026, 6.21341, -0.811751, -93.9294)
