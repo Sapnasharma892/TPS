@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqowfipmg1huf"]
+
+[ext_resource type="ArrayMesh" uid="uid://b88nppc7j8gh8" path="res://TRES/Tree/SM_Tree_Trunk_03.tres" id="1_bylos"]
+[ext_resource type="ArrayMesh" uid="uid://cmt2yfts6thh6" path="res://TRES/Leaves/SM_Tree_Leaves_03.tres" id="2_p3cs4"]
+
+[node name="Node3d" type="Node3D"]
+
+[node name="MeshInstance3d" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_bylos")
+
+[node name="MeshInstance3d" type="MeshInstance3D" parent="MeshInstance3d"]
+mesh = ExtResource("2_p3cs4")

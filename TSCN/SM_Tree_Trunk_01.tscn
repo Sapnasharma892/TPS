@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnmyerjv2p7f5"]
+
+[ext_resource type="ArrayMesh" path="res://TRES/Tree/SM_Tree_Trunk_01.tres" id="1_cnpyj"]
+[ext_resource type="ArrayMesh" path="res://TRES/Leaves/SM_Tree_Leaves_01.tres" id="2_gaw1r"]
+
+[node name="Node3d" type="Node3D"]
+
+[node name="MeshInstance3d" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_cnpyj")
+
+[node name="MeshInstance3d" type="MeshInstance3D" parent="MeshInstance3d"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.145798, 0)
+mesh = ExtResource("2_gaw1r")

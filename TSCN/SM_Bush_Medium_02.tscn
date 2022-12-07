@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://gix8w2vik7ll"]
+
+[ext_resource type="ArrayMesh" uid="uid://cvlvgqha72ynq" path="res://TRES/Bushes/SM_Bush_Medium_02.tres" id="1_vm4jb"]
+
+[node name="Node3d" type="Node3D"]
+
+[node name="MeshInstance3d" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_vm4jb")
