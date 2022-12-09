@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://rerbcp26ik7e"]
+
+[ext_resource type="ArrayMesh" uid="uid://c860r8wwv2uwa" path="res://TRES/Shipping_Container/SM_ShippingContainer.tres" id="1_m04w6"]
+
+[node name="Node3d" type="Node3D"]
+
+[node name="MeshInstance3d" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_m04w6")

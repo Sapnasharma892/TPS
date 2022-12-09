@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cohtjp2h3hla8"]
+
+[ext_resource type="ArrayMesh" uid="uid://b2c4xbv6gdpa6" path="res://TRES/Barracks/SM_Barrack_01.tres" id="1_qbwl6"]
+[ext_resource type="ArrayMesh" uid="uid://dvpu5pokme31o" path="res://TRES/WoodenCrate/SM_Woodencrate.tres" id="2_81b6k"]
+[ext_resource type="ArrayMesh" uid="uid://bnxo2u26lxvfy" path="res://TRES/Car/SM_Car.tres" id="3_ca8sw"]
+
+[node name="Node3d" type="Node3D"]
+
+[node name="MeshInstance3d" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_qbwl6")
+
+[node name="MeshInstance3d2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.85592, 0, 1.12783)
+mesh = ExtResource("2_81b6k")
+
+[node name="MeshInstance3d3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.70132, 0, 0)
+mesh = ExtResource("3_ca8sw")

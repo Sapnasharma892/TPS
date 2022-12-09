@@ -1,16 +1,19 @@
-[gd_scene load_steps=8 format=3 uid="uid://bo365smda1tio"]
+[gd_scene load_steps=27 format=3 uid="uid://bo365smda1tio"]
 
 [ext_resource type="Texture2D" uid="uid://brqy4xgqateky" path="res://Textures/Textures_DessertTerrain/Textures_DessertTerrain/Dessert_Color.png" id="1_0d3ep"]
 [ext_resource type="Texture2D" uid="uid://bkbvdco7tdxgy" path="res://Textures/Textures_DessertTerrain/Textures_DessertTerrain/Dessert_Height.png" id="1_dl1wv"]
 [ext_resource type="Shader" path="res://Shader/Heightmap.gdshader" id="3_jymlw"]
 [ext_resource type="Script" path="res://SM_Ground.gd" id="3_o86cm"]
-[ext_resource type="PackedScene" uid="uid://x070ucyecf7k" path="res://TSCN/SM_Tree_Old_01.tscn" id="5_6au8e"]
+[ext_resource type="PackedScene" uid="uid://cohtjp2h3hla8" path="res://TSCN/Barrack.tscn" id="5_wvi7g"]
+[ext_resource type="PackedScene" uid="uid://fkvy4bhhf7ay" path="res://TSCN/SM_Watch_Tower.tscn" id="6_7gbll"]
+[ext_resource type="PackedScene" uid="uid://c7p7bvakl0bs7" path="res://TSCN/SM_Sandbag_Barrier.tscn" id="7_rljq0"]
+[ext_resource type="PackedScene" uid="uid://rerbcp26ik7e" path="res://TSCN/SM_ShippingContainer.tscn" id="8_t4tvt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lb54c"]
 render_priority = 0
 shader = ExtResource("3_jymlw")
 _a = ExtResource("1_0d3ep")
-height_ratio = 700.0
+height_ratio = 900.0
 heightmap = ExtResource("1_dl1wv")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_btwxr"]
@@ -18,10 +21,61 @@ size = Vector2(2000, 2000)
 subdivide_width = 50
 subdivide_depth = 50
 
+[sub_resource type="Environment" id="Environment_rewh7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g5p2c"]
+albedo_color = Color(0.545098, 0, 0.556863, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_kqexa"]
+material = SubResource("StandardMaterial3D_g5p2c")
+size = Vector2(300, 450)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1qvhu"]
+size = Vector3(1, 1, 50)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mb25p"]
+size = Vector3(0.5, 3, 450)
+
+[sub_resource type="BoxMesh" id="BoxMesh_t6q88"]
+size = Vector3(1, 3, 300)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fwxth"]
+size = Vector3(1, 1, 50)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dwoeq"]
+size = Vector3(1, 1, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pyorq"]
+size = Vector3(1, 1, 16)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_gnypw"]
+size = Vector2(50, 50)
+
+[sub_resource type="BoxMesh" id="BoxMesh_r74ab"]
+size = Vector3(1, 1, 50)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qqiv2"]
+size = Vector3(1, 1, 25)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a78su"]
+albedo_color = Color(0, 0, 0, 0.192157)
+
+[sub_resource type="BoxMesh" id="BoxMesh_c42x7"]
+material = SubResource("StandardMaterial3D_a78su")
+size = Vector3(5, 3.5, 6)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_10up1"]
+albedo_color = Color(0.172549, 0.670588, 0.564706, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_q8exo"]
+material = SubResource("StandardMaterial3D_10up1")
+size = Vector3(5, 2.5, 4)
+
 [node name="Node3d" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.393188, 3.05176e-05, -0.162598)
 
 [node name="SM_Ground" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.250194, 0, -0.968196, 0, 1, 0, 0.968196, 0, 0.250194, 0.294427, -9.91257, -0.144424)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -78.5286, -9.93088, 23.0679)
 material_override = SubResource("ShaderMaterial_lb54c")
 mesh = SubResource("PlaneMesh_btwxr")
 script = ExtResource("3_o86cm")
@@ -38,5 +92,241 @@ fov = 76.3846
 [node name="DirectionalLight3d" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.962529, 0.161346, 0.217959, -0.223322, 0.0156617, 0.974619, 0.153838, -0.986774, 0.0511071, 11.602, 414.111, 0)
 
-[node name="SM_Tree_Old_01" parent="." instance=ExtResource("5_6au8e")]
-transform = Transform3D(0.725026, 0, -0.688722, 0, 1, 0, 0.688721, 0, 0.725026, 6.21341, -0.811751, -93.9294)
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_rewh7")
+
+[node name="Military _Base" type="Node3D" parent="."]
+visible = false
+
+[node name="SM_Military_Area" type="MeshInstance3D" parent="Military _Base"]
+transform = Transform3D(-0.999999, 0.000133126, 0.00173751, 0.00013378, 1, 0.000377514, -0.00173748, 0.000377745, -0.999999, -243.948, 6.67256, -0.925262)
+mesh = SubResource("PlaneMesh_kqexa")
+skeleton = NodePath("../..")
+
+[node name="Middle_Small_Border" type="Node3D" parent="Military _Base"]
+
+[node name="Middle_Small_Border_02" type="MeshInstance3D" parent="Military _Base/Middle_Small_Border"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -212.822, 7.20682, -200.436)
+mesh = SubResource("BoxMesh_1qvhu")
+skeleton = NodePath("../../..")
+
+[node name="Middle_Small_Border_03" type="MeshInstance3D" parent="Military _Base/Middle_Small_Border"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -262.823, 7.20682, -200.436)
+mesh = SubResource("BoxMesh_1qvhu")
+skeleton = NodePath("../../..")
+
+[node name="Midlle_Small_Border_04" type="MeshInstance3D" parent="Military _Base/Middle_Small_Border"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -306.102, 7.20682, -200.436)
+mesh = SubResource("BoxMesh_1qvhu")
+skeleton = NodePath("../../..")
+
+[node name="Middle_Small_Border_05" type="MeshInstance3D" parent="Military _Base/Middle_Small_Border"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -354.207, 7.20682, -200.436)
+mesh = SubResource("BoxMesh_1qvhu")
+skeleton = NodePath("../../..")
+
+[node name="Middle_Small_Border_06" type="MeshInstance3D" parent="Military _Base/Middle_Small_Border"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -381.7, 7.20682, -200.436)
+mesh = SubResource("BoxMesh_1qvhu")
+skeleton = NodePath("../../..")
+
+[node name="Middle_small_Border_01" type="MeshInstance3D" parent="Military _Base/Middle_Small_Border"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -141.937, 7.20682, -200.436)
+mesh = SubResource("BoxMesh_1qvhu")
+skeleton = NodePath("../../..")
+
+[node name="Border" type="Node3D" parent="Military _Base"]
+
+[node name="Border_02" type="MeshInstance3D" parent="Military _Base/Border"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -393.332, 8.12381, -0.516449)
+mesh = SubResource("BoxMesh_mb25p")
+skeleton = NodePath("../../..")
+
+[node name="Border_03" type="MeshInstance3D" parent="Military _Base/Border"]
+transform = Transform3D(-4.37114e-08, 0, 0.674394, 0, 1, 0, -1, 0, -2.94787e-08, -243.251, 8.12381, -225.596)
+mesh = SubResource("BoxMesh_mb25p")
+skeleton = NodePath("../../..")
+
+[node name="Border_01" type="MeshInstance3D" parent="Military _Base/Border"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -93.8072, 8.12381, -0.516449)
+mesh = SubResource("BoxMesh_mb25p")
+skeleton = NodePath("../../..")
+
+[node name="Middle_Border" type="Node3D" parent="Military _Base"]
+
+[node name="Middle_Border_01" type="MeshInstance3D" parent="Military _Base/Middle_Border"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -243.843, 8.08717, -76.0237)
+mesh = SubResource("BoxMesh_t6q88")
+skeleton = NodePath("../../..")
+
+[node name="Middle_Border_02" type="MeshInstance3D" parent="Military _Base/Middle_Border"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -143.373, 7.65066, 70.1775)
+mesh = SubResource("BoxMesh_t6q88")
+skeleton = NodePath("../../..")
+
+[node name="Middle_Border2" type="Node3D" parent="Military _Base"]
+
+[node name="Middle_Border_01" type="MeshInstance3D" parent="Military _Base/Middle_Border2"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -243.843, 8.76158, -175.946)
+mesh = SubResource("BoxMesh_t6q88")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3d" type="MeshInstance3D" parent="Military _Base"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -118.605, 7.32008, 7.10952)
+mesh = SubResource("BoxMesh_fwxth")
+skeleton = NodePath("../..")
+
+[node name="Node3d" type="Node3D" parent="Military _Base"]
+
+[node name="Barrack2" parent="Military _Base/Node3d" instance=ExtResource("5_wvi7g")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -110.537, 6.71172, -52.5801)
+
+[node name="Barrack3" parent="Military _Base/Node3d" instance=ExtResource("5_wvi7g")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -110.537, 6.71172, -40.4783)
+
+[node name="Barrack4" parent="Military _Base/Node3d" instance=ExtResource("5_wvi7g")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -110.537, 6.71172, -28.3431)
+
+[node name="Barrack5" parent="Military _Base/Node3d" instance=ExtResource("5_wvi7g")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -110.537, 6.71172, -16.2852)
+
+[node name="Barrack6" parent="Military _Base/Node3d" instance=ExtResource("5_wvi7g")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -110.537, 6.71172, -4.04839)
+
+[node name="Barrack" parent="Military _Base/Node3d" instance=ExtResource("5_wvi7g")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -110.537, 6.71172, -64.5158)
+
+[node name="Barrack_Distance_Middle" type="Node3D" parent="Military _Base"]
+
+[node name="Barrach_Distance_01" type="MeshInstance3D" parent="Military _Base/Barrack_Distance_Middle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.315, 7.19356, -70.5494)
+mesh = SubResource("BoxMesh_dwoeq")
+skeleton = NodePath("../../..")
+
+[node name="Barrach_Distance_02" type="MeshInstance3D" parent="Military _Base/Barrack_Distance_Middle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.315, 7.19356, -58.6123)
+mesh = SubResource("BoxMesh_dwoeq")
+skeleton = NodePath("../../..")
+
+[node name="Barrach_Distance_03" type="MeshInstance3D" parent="Military _Base/Barrack_Distance_Middle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.315, 7.19356, -46.5474)
+mesh = SubResource("BoxMesh_dwoeq")
+skeleton = NodePath("../../..")
+
+[node name="Barrach_Distance_04" type="MeshInstance3D" parent="Military _Base/Barrack_Distance_Middle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.315, 7.19356, -34.724)
+mesh = SubResource("BoxMesh_dwoeq")
+skeleton = NodePath("../../..")
+
+[node name="Barrach_Distance_05" type="MeshInstance3D" parent="Military _Base/Barrack_Distance_Middle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.315, 7.19356, -22.5585)
+mesh = SubResource("BoxMesh_dwoeq")
+skeleton = NodePath("../../..")
+
+[node name="Barrach_Distance_06" type="MeshInstance3D" parent="Military _Base/Barrack_Distance_Middle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.315, 7.19356, -10.2858)
+mesh = SubResource("BoxMesh_dwoeq")
+skeleton = NodePath("../../..")
+
+[node name="Barrach_Distance_07" type="MeshInstance3D" parent="Military _Base/Barrack_Distance_Middle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.315, 7.19356, 1.51628)
+mesh = SubResource("BoxMesh_dwoeq")
+skeleton = NodePath("../../..")
+
+[node name="Barrack_distance_Back" type="MeshInstance3D" parent="Military _Base"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -101.859, 7.21465, 0.10125)
+mesh = SubResource("BoxMesh_pyorq")
+skeleton = NodePath("../..")
+
+[node name="Base_01" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -236.499, 0.28801, 263.619)
+
+[node name="MilitaryBase_01" type="MeshInstance3D" parent="Base_01"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -274.955, 7.06074, 0)
+mesh = SubResource("PlaneMesh_gnypw")
+skeleton = NodePath("../..")
+
+[node name="Military_Border_01_Base_01" type="Node3D" parent="Base_01"]
+
+[node name="SM_Miltary_Border_01" type="MeshInstance3D" parent="Base_01/Military_Border_01_Base_01"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -274.846, 7.31485, -24.6465)
+mesh = SubResource("BoxMesh_r74ab")
+skeleton = NodePath("../../..")
+
+[node name="SM_Miltary_Border_02" type="MeshInstance3D" parent="Base_01/Military_Border_01_Base_01"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -299.71, 7.36776, -0.103778)
+mesh = SubResource("BoxMesh_r74ab")
+skeleton = NodePath("../../..")
+
+[node name="SM_Miltary_Border_03" type="MeshInstance3D" parent="Base_01/Military_Border_01_Base_01"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -250.514, 7.31485, -0.103778)
+mesh = SubResource("BoxMesh_r74ab")
+skeleton = NodePath("../../..")
+
+[node name="SM_MIlitary_Border_04" type="MeshInstance3D" parent="Base_01/Military_Border_01_Base_01"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -287.767, 7.35946, 24.5496)
+mesh = SubResource("BoxMesh_qqiv2")
+skeleton = NodePath("../../..")
+
+[node name="WatchTower_base_01" type="Node3D" parent="Base_01"]
+
+[node name="SM_WatchTower_01_Base_01_" parent="Base_01/WatchTower_base_01" instance=ExtResource("6_7gbll")]
+transform = Transform3D(-0.784095, 0, -0.620642, 0, 1, 0, 0.620642, 0, -0.784095, -296.985, 7.10285, 22.2703)
+
+[node name="SM_WatchTower_01_Base_01_2" parent="Base_01/WatchTower_base_01" instance=ExtResource("6_7gbll")]
+transform = Transform3D(-0.773929, 0, 0.633273, 0, 1, 0, -0.633273, 0, -0.773929, -297.458, 7.11674, -21.8374)
+
+[node name="SM_WatchTower_01_Base_01_3" parent="Base_01/WatchTower_base_01" instance=ExtResource("6_7gbll")]
+transform = Transform3D(0.78653, -0.00967274, 0.617477, 0.0080879, 0.999953, 0.005362, -0.6175, 0.000776722, 0.786571, -252.801, 7.11674, -21.7311)
+
+[node name="SM_WatchTower_01_Base_01_4" parent="Base_01/WatchTower_base_01" instance=ExtResource("6_7gbll")]
+transform = Transform3D(0.753243, -0.00256549, -0.657737, 0.0080879, 0.999953, 0.005362, 0.657692, -0.0093586, 0.753229, -252.923, 7.11674, 22.5112)
+
+[node name="SM_SandBag_Base_01" parent="Base_01" instance=ExtResource("7_rljq0")]
+transform = Transform3D(0.999638, 0, -0.0268922, 0, 1, 0, 0.0268922, 0, 0.999638, -253.002, 7.05874, -2.18871)
+
+[node name="SM_Helipad_01_Base" type="MeshInstance3D" parent="Base_01"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -282.307, 8.75035, -15.7504)
+mesh = SubResource("BoxMesh_c42x7")
+skeleton = NodePath("../..")
+
+[node name="ShippingContainer_Base_01" type="Node3D" parent="Base_01"]
+
+[node name="SM_ShippingContainer_01_" parent="Base_01/ShippingContainer_Base_01" instance=ExtResource("8_t4tvt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -257.859, 7.05316, -18.9327)
+
+[node name="SM_ShippingContainer_02_" parent="Base_01/ShippingContainer_Base_01" instance=ExtResource("8_t4tvt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -263.714, 7.05316, -18.9327)
+
+[node name="SM_ShippingContainer_03_" parent="Base_01/ShippingContainer_Base_01" instance=ExtResource("8_t4tvt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -270.299, 7.05316, -18.9327)
+
+[node name="Bunker_Base_01" type="Node3D" parent="Base_01"]
+
+[node name="SM_Bunker_01" type="MeshInstance3D" parent="Base_01/Bunker_Base_01"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -256.703, 8.36113, 8.64023)
+mesh = SubResource("BoxMesh_q8exo")
+skeleton = NodePath("../../..")
+
+[node name="SM_Bunker_02" type="MeshInstance3D" parent="Base_01/Bunker_Base_01"]
+transform = Transform3D(0.00185008, 0, 0.999998, 0, 1, 0, -0.999998, 0, 0.00185008, -268.67, 8.36113, 4.18826)
+mesh = SubResource("BoxMesh_q8exo")
+skeleton = NodePath("../../..")
+
+[node name="SM_Bunker_03" type="MeshInstance3D" parent="Base_01/Bunker_Base_01"]
+transform = Transform3D(0.00185008, 0, 0.999998, 0, 1, 0, -0.999998, 0, 0.00185008, -281.252, 8.36113, 4.18826)
+mesh = SubResource("BoxMesh_q8exo")
+skeleton = NodePath("../../..")
+
+[node name="SM_Bunker__02" type="MeshInstance3D" parent="Base_01/Bunker_Base_01"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -256.703, 8.60365, 16.2707)
+mesh = SubResource("BoxMesh_q8exo")
+skeleton = NodePath("../../..")
+
+[node name="Barrack_Base_01" type="Node3D" parent="Base_01"]
+
+[node name="SM_Barrack_02_Base_01" parent="Base_01/Barrack_Base_01" instance=ExtResource("5_wvi7g")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -294.238, 7.12524, 1.81688)
+
+[node name="SM_Barrack_01_Base_01" parent="Base_01/Barrack_Base_01" instance=ExtResource("5_wvi7g")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -295.014, 7.12524, 11.9167)

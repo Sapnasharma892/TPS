@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://fkvy4bhhf7ay"]
+
+[ext_resource type="ArrayMesh" uid="uid://b0c64wb6as2v3" path="res://TRES/Watch_Tower/SM_Watch_Tower.tres" id="1_ddy6v"]
+
+[node name="Node3d" type="Node3D"]
+
+[node name="MeshInstance3d" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_ddy6v")
