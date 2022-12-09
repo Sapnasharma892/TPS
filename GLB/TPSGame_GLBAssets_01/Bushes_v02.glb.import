@@ -15,7 +15,6 @@ dest_files=["res://.godot/imported/Bushes_v02.glb-f779edc4490ec57b2c7867917a2034
 
 nodes/root_type="Node3D"
 nodes/root_name="Scene Root"
-nodes/apply_root_scale=true
 nodes/root_scale=1.0
 meshes/ensure_tangents=true
 meshes/generate_lods=true

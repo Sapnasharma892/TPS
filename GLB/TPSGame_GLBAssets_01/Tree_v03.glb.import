@@ -15,7 +15,6 @@ dest_files=["res://.godot/imported/Tree_v03.glb-6d0579a8bc3014d4afabb239bb6c1ba4
 
 nodes/root_type="Node3D"
 nodes/root_name="Scene Root"
-nodes/apply_root_scale=true
 nodes/root_scale=1.0
 meshes/ensure_tangents=true
 meshes/generate_lods=true
