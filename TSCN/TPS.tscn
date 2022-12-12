@@ -1,20 +1,22 @@
-[gd_scene load_steps=28 format=3 uid="uid://bo365smda1tio"]
+[gd_scene load_steps=22 format=3 uid="uid://bo365smda1tio"]
 
 [ext_resource type="Texture2D" uid="uid://brqy4xgqateky" path="res://Textures/Textures_DessertTerrain/Textures_DessertTerrain/Dessert_Color.png" id="1_0d3ep"]
 [ext_resource type="Texture2D" uid="uid://bkbvdco7tdxgy" path="res://Textures/Textures_DessertTerrain/Textures_DessertTerrain/Dessert_Height.png" id="1_dl1wv"]
 [ext_resource type="Shader" path="res://Shader/Heightmap.gdshader" id="3_jymlw"]
 [ext_resource type="Script" path="res://SM_Ground.gd" id="3_o86cm"]
-[ext_resource type="PackedScene" uid="uid://cohtjp2h3hla8" path="res://TSCN/Barrack.tscn" id="5_wvi7g"]
 [ext_resource type="PackedScene" uid="uid://fkvy4bhhf7ay" path="res://TSCN/SM_Watch_Tower.tscn" id="6_7gbll"]
+[ext_resource type="PackedScene" uid="uid://xruhxuqd1b00" path="res://TSCN/SM_Barrack_02.tscn" id="7_bpvpl"]
 [ext_resource type="PackedScene" uid="uid://c7p7bvakl0bs7" path="res://TSCN/SM_Sandbag_Barrier.tscn" id="7_rljq0"]
+[ext_resource type="PackedScene" uid="uid://bjo54lpoxi745" path="res://TSCN/SM_Tunnel_Tent.tscn" id="8_jht02"]
 [ext_resource type="PackedScene" uid="uid://rerbcp26ik7e" path="res://TSCN/SM_ShippingContainer.tscn" id="8_t4tvt"]
 [ext_resource type="MeshLibrary" uid="uid://cmwattimbyppx" path="res://Mesh/Road.meshlib" id="9_6brhg"]
+[ext_resource type="PackedScene" uid="uid://douv0jqkasqx2" path="res://TSCN/SM_Water_Tank_01.tscn" id="11_emadj"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lb54c"]
 render_priority = 0
 shader = ExtResource("3_jymlw")
 _a = ExtResource("1_0d3ep")
-height_ratio = 900.0
+height_ratio = 700.0
 heightmap = ExtResource("1_dl1wv")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_btwxr"]
@@ -24,67 +26,43 @@ subdivide_depth = 50
 
 [sub_resource type="Environment" id="Environment_rewh7"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g5p2c"]
-albedo_color = Color(0.545098, 0, 0.556863, 1)
+[sub_resource type="PlaneMesh" id="PlaneMesh_tycs0"]
+size = Vector2(150, 200)
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_kqexa"]
-material = SubResource("StandardMaterial3D_g5p2c")
-size = Vector2(300, 450)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x071e"]
+albedo_color = Color(1, 0.203922, 1, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_1qvhu"]
-size = Vector3(1, 1, 50)
+[sub_resource type="BoxMesh" id="BoxMesh_ps3lr"]
+material = SubResource("StandardMaterial3D_x071e")
+size = Vector3(200, 3, 2)
 
-[sub_resource type="BoxMesh" id="BoxMesh_mb25p"]
-size = Vector3(0.5, 3, 450)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ioy6"]
+albedo_color = Color(0.501961, 1, 1, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_t6q88"]
-size = Vector3(1, 3, 300)
+[sub_resource type="BoxMesh" id="BoxMesh_smbp1"]
+material = SubResource("StandardMaterial3D_5ioy6")
+size = Vector3(150, 3, 2)
 
-[sub_resource type="BoxMesh" id="BoxMesh_fwxth"]
-size = Vector3(1, 1, 50)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nocij"]
+albedo_color = Color(1, 1, 0.368627, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_dwoeq"]
-size = Vector3(1, 1, 10)
-
-[sub_resource type="BoxMesh" id="BoxMesh_pyorq"]
-size = Vector3(1, 1, 16)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_gnypw"]
-size = Vector2(50, 50)
-
-[sub_resource type="BoxMesh" id="BoxMesh_r74ab"]
-size = Vector3(1, 1, 50)
-
-[sub_resource type="BoxMesh" id="BoxMesh_qqiv2"]
-size = Vector3(1, 1, 25)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a78su"]
-albedo_color = Color(0, 0, 0, 0.192157)
-
-[sub_resource type="BoxMesh" id="BoxMesh_c42x7"]
-material = SubResource("StandardMaterial3D_a78su")
-size = Vector3(5, 3.5, 6)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_10up1"]
-albedo_color = Color(0.172549, 0.670588, 0.564706, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_q8exo"]
-material = SubResource("StandardMaterial3D_10up1")
-size = Vector3(5, 2.5, 4)
+[sub_resource type="PlaneMesh" id="PlaneMesh_tph1s"]
+material = SubResource("StandardMaterial3D_nocij")
+size = Vector2(10, 2)
 
 [node name="Node3d" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.393188, 3.05176e-05, -0.162598)
 
-[node name="SM_Ground" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -78.5286, -9.93088, 23.0679)
+[node name="SM_Lower_Ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -110.501, -9.93088, 23.0679)
 material_override = SubResource("ShaderMaterial_lb54c")
 mesh = SubResource("PlaneMesh_btwxr")
 script = ExtResource("3_o86cm")
 
-[node name="StaticBody3d" type="StaticBody3D" parent="SM_Ground"]
+[node name="StaticBody3d" type="StaticBody3D" parent="SM_Lower_Ground"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.124954, 3.8147e-06, 0.0127106)
 
-[node name="CollisionShape3d" type="CollisionShape3D" parent="SM_Ground/StaticBody3d"]
+[node name="CollisionShape3d" type="CollisionShape3D" parent="SM_Lower_Ground/StaticBody3d"]
 
 [node name="Camera3d" type="Camera3D" parent="."]
 transform = Transform3D(0.00296707, 0, -0.999996, 0, 1, 0, 0.999996, 0, 0.00296707, -0.307208, 0, 0.247091)
@@ -96,246 +74,160 @@ transform = Transform3D(0.962529, 0.161346, 0.217959, -0.223322, 0.0156617, 0.97
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_rewh7")
 
-[node name="Military _Base" type="Node3D" parent="."]
-visible = false
+[node name="SM_Boarder" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0869746, 0, 83.1586)
 
-[node name="SM_Military_Area" type="MeshInstance3D" parent="Military _Base"]
-transform = Transform3D(-0.999999, 0.000133126, 0.00173751, 0.00013378, 1, 0.000377514, -0.00173748, 0.000377745, -0.999999, -243.948, 6.67256, -0.925262)
-mesh = SubResource("PlaneMesh_kqexa")
+[node name="SM_Upper_Ground" type="MeshInstance3D" parent="SM_Boarder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -297.435, 5.44226, -1.66836)
+mesh = SubResource("PlaneMesh_tycs0")
 skeleton = NodePath("../..")
 
-[node name="Middle_Small_Border" type="Node3D" parent="Military _Base"]
-
-[node name="Middle_Small_Border_02" type="MeshInstance3D" parent="Military _Base/Middle_Small_Border"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -212.822, 7.20682, -200.436)
-mesh = SubResource("BoxMesh_1qvhu")
-skeleton = NodePath("../../..")
-
-[node name="Middle_Small_Border_03" type="MeshInstance3D" parent="Military _Base/Middle_Small_Border"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -262.823, 7.20682, -200.436)
-mesh = SubResource("BoxMesh_1qvhu")
-skeleton = NodePath("../../..")
-
-[node name="Midlle_Small_Border_04" type="MeshInstance3D" parent="Military _Base/Middle_Small_Border"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -306.102, 7.20682, -200.436)
-mesh = SubResource("BoxMesh_1qvhu")
-skeleton = NodePath("../../..")
-
-[node name="Middle_Small_Border_05" type="MeshInstance3D" parent="Military _Base/Middle_Small_Border"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -354.207, 7.20682, -200.436)
-mesh = SubResource("BoxMesh_1qvhu")
-skeleton = NodePath("../../..")
-
-[node name="Middle_Small_Border_06" type="MeshInstance3D" parent="Military _Base/Middle_Small_Border"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -381.7, 7.20682, -200.436)
-mesh = SubResource("BoxMesh_1qvhu")
-skeleton = NodePath("../../..")
-
-[node name="Middle_small_Border_01" type="MeshInstance3D" parent="Military _Base/Middle_Small_Border"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -141.937, 7.20682, -200.436)
-mesh = SubResource("BoxMesh_1qvhu")
-skeleton = NodePath("../../..")
-
-[node name="Border" type="Node3D" parent="Military _Base"]
-
-[node name="Border_02" type="MeshInstance3D" parent="Military _Base/Border"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -393.332, 8.12381, -0.516449)
-mesh = SubResource("BoxMesh_mb25p")
-skeleton = NodePath("../../..")
-
-[node name="Border_03" type="MeshInstance3D" parent="Military _Base/Border"]
-transform = Transform3D(-4.37114e-08, 0, 0.674394, 0, 1, 0, -1, 0, -2.94787e-08, -243.251, 8.12381, -225.596)
-mesh = SubResource("BoxMesh_mb25p")
-skeleton = NodePath("../../..")
-
-[node name="Border_01" type="MeshInstance3D" parent="Military _Base/Border"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -93.8072, 8.12381, -0.516449)
-mesh = SubResource("BoxMesh_mb25p")
-skeleton = NodePath("../../..")
-
-[node name="Middle_Border" type="Node3D" parent="Military _Base"]
-
-[node name="Middle_Border_01" type="MeshInstance3D" parent="Military _Base/Middle_Border"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -243.843, 8.08717, -76.0237)
-mesh = SubResource("BoxMesh_t6q88")
-skeleton = NodePath("../../..")
-
-[node name="Middle_Border_02" type="MeshInstance3D" parent="Military _Base/Middle_Border"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -143.373, 7.65066, 70.1775)
-mesh = SubResource("BoxMesh_t6q88")
-skeleton = NodePath("../../..")
-
-[node name="Middle_Border2" type="Node3D" parent="Military _Base"]
-
-[node name="Middle_Border_01" type="MeshInstance3D" parent="Military _Base/Middle_Border2"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -243.843, 8.76158, -175.946)
-mesh = SubResource("BoxMesh_t6q88")
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3d" type="MeshInstance3D" parent="Military _Base"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -118.605, 7.32008, 7.10952)
-mesh = SubResource("BoxMesh_fwxth")
+[node name="SM_Fence" type="MeshInstance3D" parent="SM_Boarder"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -222.667, 7.16832, -1.2521)
+mesh = SubResource("BoxMesh_ps3lr")
 skeleton = NodePath("../..")
 
-[node name="Node3d" type="Node3D" parent="Military _Base"]
-
-[node name="Barrack2" parent="Military _Base/Node3d" instance=ExtResource("5_wvi7g")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -110.537, 6.71172, -52.5801)
-
-[node name="Barrack3" parent="Military _Base/Node3d" instance=ExtResource("5_wvi7g")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -110.537, 6.71172, -40.4783)
-
-[node name="Barrack4" parent="Military _Base/Node3d" instance=ExtResource("5_wvi7g")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -110.537, 6.71172, -28.3431)
-
-[node name="Barrack5" parent="Military _Base/Node3d" instance=ExtResource("5_wvi7g")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -110.537, 6.71172, -16.2852)
-
-[node name="Barrack6" parent="Military _Base/Node3d" instance=ExtResource("5_wvi7g")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -110.537, 6.71172, -4.04839)
-
-[node name="Barrack" parent="Military _Base/Node3d" instance=ExtResource("5_wvi7g")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -110.537, 6.71172, -64.5158)
-
-[node name="Barrack_Distance_Middle" type="Node3D" parent="Military _Base"]
-
-[node name="Barrach_Distance_01" type="MeshInstance3D" parent="Military _Base/Barrack_Distance_Middle"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.315, 7.19356, -70.5494)
-mesh = SubResource("BoxMesh_dwoeq")
-skeleton = NodePath("../../..")
-
-[node name="Barrach_Distance_02" type="MeshInstance3D" parent="Military _Base/Barrack_Distance_Middle"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.315, 7.19356, -58.6123)
-mesh = SubResource("BoxMesh_dwoeq")
-skeleton = NodePath("../../..")
-
-[node name="Barrach_Distance_03" type="MeshInstance3D" parent="Military _Base/Barrack_Distance_Middle"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.315, 7.19356, -46.5474)
-mesh = SubResource("BoxMesh_dwoeq")
-skeleton = NodePath("../../..")
-
-[node name="Barrach_Distance_04" type="MeshInstance3D" parent="Military _Base/Barrack_Distance_Middle"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.315, 7.19356, -34.724)
-mesh = SubResource("BoxMesh_dwoeq")
-skeleton = NodePath("../../..")
-
-[node name="Barrach_Distance_05" type="MeshInstance3D" parent="Military _Base/Barrack_Distance_Middle"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.315, 7.19356, -22.5585)
-mesh = SubResource("BoxMesh_dwoeq")
-skeleton = NodePath("../../..")
-
-[node name="Barrach_Distance_06" type="MeshInstance3D" parent="Military _Base/Barrack_Distance_Middle"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.315, 7.19356, -10.2858)
-mesh = SubResource("BoxMesh_dwoeq")
-skeleton = NodePath("../../..")
-
-[node name="Barrach_Distance_07" type="MeshInstance3D" parent="Military _Base/Barrack_Distance_Middle"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.315, 7.19356, 1.51628)
-mesh = SubResource("BoxMesh_dwoeq")
-skeleton = NodePath("../../..")
-
-[node name="Barrack_distance_Back" type="MeshInstance3D" parent="Military _Base"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -101.859, 7.21465, 0.10125)
-mesh = SubResource("BoxMesh_pyorq")
+[node name="SM_Fence3" type="MeshInstance3D" parent="SM_Boarder"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -304.924, 7.16832, -1.88608)
+mesh = SubResource("BoxMesh_ps3lr")
 skeleton = NodePath("../..")
 
-[node name="Base_01" type="Node3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -236.499, 0.28801, 263.619)
-
-[node name="MilitaryBase_01" type="MeshInstance3D" parent="Base_01"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -274.955, 7.06074, 0)
-mesh = SubResource("PlaneMesh_gnypw")
+[node name="SM_Fence5" type="MeshInstance3D" parent="SM_Boarder"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -360.583, 6.98212, -1.88608)
+mesh = SubResource("BoxMesh_ps3lr")
 skeleton = NodePath("../..")
 
-[node name="Military_Border_01_Base_01" type="Node3D" parent="Base_01"]
-
-[node name="SM_Miltary_Border_01" type="MeshInstance3D" parent="Base_01/Military_Border_01_Base_01"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -274.846, 7.31485, -24.6465)
-mesh = SubResource("BoxMesh_r74ab")
-skeleton = NodePath("../../..")
-
-[node name="SM_Miltary_Border_02" type="MeshInstance3D" parent="Base_01/Military_Border_01_Base_01"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -299.71, 7.36776, -0.103778)
-mesh = SubResource("BoxMesh_r74ab")
-skeleton = NodePath("../../..")
-
-[node name="SM_Miltary_Border_03" type="MeshInstance3D" parent="Base_01/Military_Border_01_Base_01"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -250.514, 7.31485, -0.103778)
-mesh = SubResource("BoxMesh_r74ab")
-skeleton = NodePath("../../..")
-
-[node name="SM_MIlitary_Border_04" type="MeshInstance3D" parent="Base_01/Military_Border_01_Base_01"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -287.767, 7.35946, 24.5496)
-mesh = SubResource("BoxMesh_qqiv2")
-skeleton = NodePath("../../..")
-
-[node name="WatchTower_base_01" type="Node3D" parent="Base_01"]
-
-[node name="SM_WatchTower_01_Base_01_" parent="Base_01/WatchTower_base_01" instance=ExtResource("6_7gbll")]
-transform = Transform3D(-0.784095, 0, -0.620642, 0, 1, 0, 0.620642, 0, -0.784095, -296.985, 7.10285, 22.2703)
-
-[node name="SM_WatchTower_01_Base_01_2" parent="Base_01/WatchTower_base_01" instance=ExtResource("6_7gbll")]
-transform = Transform3D(-0.773929, 0, 0.633273, 0, 1, 0, -0.633273, 0, -0.773929, -297.458, 7.11674, -21.8374)
-
-[node name="SM_WatchTower_01_Base_01_3" parent="Base_01/WatchTower_base_01" instance=ExtResource("6_7gbll")]
-transform = Transform3D(0.78653, -0.00967274, 0.617477, 0.0080879, 0.999953, 0.005362, -0.6175, 0.000776722, 0.786571, -252.801, 7.11674, -21.7311)
-
-[node name="SM_WatchTower_01_Base_01_4" parent="Base_01/WatchTower_base_01" instance=ExtResource("6_7gbll")]
-transform = Transform3D(0.753243, -0.00256549, -0.657737, 0.0080879, 0.999953, 0.005362, 0.657692, -0.0093586, 0.753229, -252.923, 7.11674, 22.5112)
-
-[node name="SM_SandBag_Base_01" parent="Base_01" instance=ExtResource("7_rljq0")]
-transform = Transform3D(0.999638, 0, -0.0268922, 0, 1, 0, 0.0268922, 0, 0.999638, -253.002, 7.05874, -2.18871)
-
-[node name="SM_Helipad_01_Base" type="MeshInstance3D" parent="Base_01"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -282.307, 8.75035, -15.7504)
-mesh = SubResource("BoxMesh_c42x7")
-skeleton = NodePath("../..")
-
-[node name="ShippingContainer_Base_01" type="Node3D" parent="Base_01"]
-
-[node name="SM_ShippingContainer_01_" parent="Base_01/ShippingContainer_Base_01" instance=ExtResource("8_t4tvt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -257.859, 7.05316, -18.9327)
-
-[node name="SM_ShippingContainer_02_" parent="Base_01/ShippingContainer_Base_01" instance=ExtResource("8_t4tvt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -263.714, 7.05316, -18.9327)
-
-[node name="SM_ShippingContainer_03_" parent="Base_01/ShippingContainer_Base_01" instance=ExtResource("8_t4tvt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -270.299, 7.05316, -18.9327)
-
-[node name="Bunker_Base_01" type="Node3D" parent="Base_01"]
-
-[node name="SM_Bunker_01" type="MeshInstance3D" parent="Base_01/Bunker_Base_01"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -256.703, 8.36113, 8.64023)
-mesh = SubResource("BoxMesh_q8exo")
-skeleton = NodePath("../../..")
-
-[node name="SM_Bunker_02" type="MeshInstance3D" parent="Base_01/Bunker_Base_01"]
-transform = Transform3D(0.00185008, 0, 0.999998, 0, 1, 0, -0.999998, 0, 0.00185008, -268.67, 8.36113, 4.18826)
-mesh = SubResource("BoxMesh_q8exo")
-skeleton = NodePath("../../..")
-
-[node name="SM_Bunker_03" type="MeshInstance3D" parent="Base_01/Bunker_Base_01"]
-transform = Transform3D(0.00185008, 0, 0.999998, 0, 1, 0, -0.999998, 0, 0.00185008, -281.252, 8.36113, 4.18826)
-mesh = SubResource("BoxMesh_q8exo")
-skeleton = NodePath("../../..")
-
-[node name="SM_Bunker__02" type="MeshInstance3D" parent="Base_01/Bunker_Base_01"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -256.703, 8.60365, 16.2707)
-mesh = SubResource("BoxMesh_q8exo")
-skeleton = NodePath("../../..")
-
-[node name="Barrack_Base_01" type="Node3D" parent="Base_01"]
-
-[node name="SM_Barrack_02_Base_01" parent="Base_01/Barrack_Base_01" instance=ExtResource("5_wvi7g")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -294.238, 7.12524, 1.81688)
-
-[node name="SM_Barrack_01_Base_01" parent="Base_01/Barrack_Base_01" instance=ExtResource("5_wvi7g")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -295.014, 7.12524, 11.9167)
-
-[node name="Gridmap_Road" type="GridMap" parent="."]
+[node name="GridMap_Road" type="GridMap" parent="SM_Boarder"]
 mesh_library = ExtResource("9_6brhg")
-cell_size = Vector3(1.982, 1.634, 1.196)
+cell_size = Vector3(1.98, 0.389, 0.969)
 data = {
-"cells": PackedInt32Array(327549, 65533, 0, 327550, 65533, 0, 327551, 65533, 0, 327552, 65533, 0, 327548, 65533, 0, 327553, 65533, 0, 327554, 65533, 0, 327555, 65533, 0, 327556, 65533, 0, 327554, 65512, 0, 327553, 65512, 0, 327552, 65512, 0, 327551, 65512, 0, 327550, 65512, 0, 327555, 65512, 0, 327556, 65512, 0, 327557, 65512, 0, 327558, 65512, 0, 327559, 65512, 0, 327560, 65512, 0, 327561, 65512, 0, 327562, 65512, 0, 327563, 65512, 0, 327564, 65512, 0, 327565, 65512, 0, 327566, 65513, 1441792, 327566, 65514, 1441792, 327566, 65515, 1441792, 327566, 65516, 1441792, 327566, 65517, 1441792, 327566, 65518, 1441792, 327566, 65519, 1441792, 327566, 65520, 1441792, 327566, 65521, 1441792, 327566, 65522, 1441792, 327566, 65523, 1441792, 327566, 65525, 1441792, 327566, 65524, 1441792, 327566, 65526, 1441792, 327566, 65527, 1441792, 327566, 65528, 1441792, 327566, 65529, 1441792, 327566, 65530, 1441792, 327566, 65531, 1441792, 327566, 65532, 1441792, 327566, 65533, 1441792, 327566, 65534, 1441792, 327566, 65535, 1441792, 327566, 0, 1441792, 327565, 1, 655360, 327564, 1, 655360, 327563, 1, 655360, 327562, 1, 655360, 327561, 1, 655360, 327560, 1, 655360, 327559, 1, 655360, 327558, 1, 655360, 327548, 65532, 655360, 327548, 65531, 655360, 327548, 65530, 655360, 327548, 65529, 655360, 327549, 65529, 655360, 327549, 65530, 655360, 327549, 65531, 655360, 327549, 65532, 655360, 327550, 65532, 655360, 327550, 65531, 655360, 327550, 65530, 655360, 327550, 65529, 655360, 327551, 65529, 655360, 327551, 65530, 655360, 327551, 65531, 655360, 327551, 65532, 655360, 327552, 65532, 655360, 327552, 65531, 655360, 327552, 65530, 655360, 327552, 65529, 655360, 327553, 65529, 655360, 327553, 65530, 655360, 327553, 65532, 655360, 327553, 65531, 655360, 327554, 65532, 655360, 327554, 65531, 655360, 327554, 65530, 655360, 327554, 65529, 655360, 327555, 65529, 655360, 327555, 65530, 655360, 327555, 65531, 655360, 327555, 65532, 655360, 327550, 65513, 655360, 327551, 65513, 655360, 327552, 65513, 655360, 327553, 65513, 655360, 327554, 65513, 655360, 327555, 65513, 655360, 327556, 65513, 655360, 327557, 65513, 655360, 327558, 65513, 655360, 327559, 65513, 655360, 327560, 65513, 655360, 327561, 65513, 655360, 327562, 65513, 655360, 327564, 65513, 655360, 327563, 65513, 655360, 327565, 65513, 655360, 327556, 65511, 1048576, 327556, 65510, 1048576, 327556, 65509, 1048576, 327556, 65508, 1048576, 327552, 65511, 1048576, 327552, 65510, 1048576, 327552, 65508, 1048576, 327552, 65509, 1048576, 327562, 65511, 1048576, 327562, 65509, 1048576, 327562, 65510, 1048576, 327562, 65508, 1048576, 262223, 10, 1048576, 262225, 9, 1048576, 262225, 10, 1048576, 262226, 9, 1048576, 262227, 9, 1048576, 262227, 8, 1048576, 262228, 8, 1048576, 262229, 8, 1048576, 262230, 7, 1048576, 262231, 7, 1048576, 262232, 7, 1048576, 262233, 7, 1048576, 262233, 6, 1048576, 262234, 6, 1048576, 262235, 6, 1048576, 262236, 6, 1048576, 262237, 7, 1048576, 262239, 8, 1048576, 262240, 8, 1048576, 262240, 9, 1048576, 262241, 9, 1048576, 262242, 9, 1048576, 262242, 8, 1048576, 262243, 8, 1048576, 262244, 8, 1048576, 262245, 8, 1048576, 262245, 7, 1048576, 262246, 7, 1048576, 262247, 7, 1048576, 262248, 7, 1048576, 262249, 7, 1048576, 262249, 6, 1048576, 262250, 6, 1048576, 262251, 6, 1048576, 262252, 6, 1048576, 262253, 7, 1048576, 262221, 9, 1048576, 262220, 9, 1048576, 262220, 8, 1048576, 262221, 8, 1048576, 262222, 8, 1048576, 262223, 8, 1048576, 262228, 9, 1048576, 262229, 9, 1048576, 262231, 9, 1048576, 262232, 9, 1048576, 262233, 9, 1048576, 262234, 9, 1048576, 262237, 9, 1048576, 262239, 9, 1048576, 262237, 8, 1048576, 262235, 8, 1048576, 262234, 8, 1048576, 262231, 8, 1048576, 262229, 7, 1048576, 262226, 7, 1048576, 262224, 7, 1048576, 262223, 6, 1048576, 262220, 6, 1048576, 262218, 6, 1048576, 262214, 5, 1048576, 262211, 5, 1048576, 262207, 4, 1048576, 262203, 4, 1048576, 262200, 3, 1048576, 262197, 2, 1048576, 262191, 1, 1048576, 262189, 1, 1048576, 262186, 0, 1048576, 262185, 0, 1048576, 262184, 0, 1048576, 262183, 0, 1048576, 262183, 1, 1048576, 262215, 8, 1048576, 262214, 9, 1048576, 262213, 10, 1048576, 262213, 11, 1048576, 262212, 11, 1048576, 262212, 12, 1048576, 262212, 13, 1048576, 262212, 14, 1048576, 327567, 65525, 0, 327568, 65525, 0, 327569, 65525, 0, 327570, 65525, 0, 327571, 65525, 0, 327572, 65525, 0)
+"cells": PackedInt32Array(24, 65535, 786432, 23, 65535, 786432, 22, 65535, 786432, 20, 65535, 786432, 19, 65535, 786432, 16, 0, 786432, 14, 0, 786432, 11, 1, 786432, 10, 1, 786432, 9, 1, 786432, 8, 1, 786432, 7, 2, 786432, 6, 2, 786432, 5, 2, 786432, 65536, 47, 0, 65536, 46, 0, 65536, 45, 0, 65536, 44, 0, 65536, 42, 0, 65536, 39, 0, 65536, 36, 0, 65536, 35, 0, 65536, 34, 0, 65536, 33, 0, 65536, 31, 0, 65536, 29, 0, 65536, 28, 0, 65536, 27, 0, 65536, 26, 0, 65536, 25, 0, 65536, 24, 0, 65536, 22, 0, 131071, 21, 0, 131071, 19, 0, 131071, 18, 131072, 131070, 18, 0, 65608, 65533, 0, 65609, 65533, 0, 65610, 65533, 0, 65612, 65533, 0, 65613, 65533, 0, 65618, 65533, 0, 65625, 65533, 0, 65633, 65531, 0, 65637, 65531, 0, 65640, 65531, 0, 65641, 65530, 0, 65642, 65530, 0, 65644, 65530, 0, 65644, 65529, 0, 131070, 72, 0, 131070, 70, 0, 131068, 59, 0, 131067, 58, 0, 131065, 53, 0, 131063, 47, 0, 131062, 42, 0, 131061, 39, 0, 131060, 36, 0, 131060, 35, 0, 65598, 65535, 0, 65597, 65535, 0, 65596, 65535, 0, 65595, 65535, 0, 65594, 65535, 0, 65593, 65534, 0, 65592, 65534, 0, 65591, 65534, 0, 65590, 65534, 0, 65589, 65534, 0, 65588, 65534, 0, 65587, 65534, 0, 65586, 65534, 0, 65585, 65534, 0, 130955, 16, 0, 130931, 97, 0, 130902, 112, 0, 130901, 112, 0, 130900, 112, 0, 130899, 112, 0, 130903, 112, 0, 130904, 112, 0, 130905, 112, 0, 130906, 112, 0, 130907, 112, 0, 130908, 112, 0, 130909, 112, 0, 130910, 112, 0, 130911, 112, 0, 130912, 112, 0, 130913, 112, 0, 130914, 112, 0, 130915, 112, 0, 130916, 112, 0, 130917, 112, 0, 130918, 112, 0, 130919, 112, 0, 130920, 112, 0, 130921, 112, 0, 130922, 112, 0, 130923, 112, 0, 130924, 112, 0, 130925, 112, 0, 130926, 112, 0, 130927, 112, 0, 130928, 112, 0, 130929, 112, 0, 130930, 112, 0, 130931, 112, 0, 130932, 112, 0, 130933, 112, 0, 130934, 112, 0, 130935, 112, 0, 130936, 112, 0, 130937, 112, 0, 130938, 112, 0, 130939, 112, 0, 130940, 112, 0, 130941, 112, 0, 130942, 112, 0, 130943, 112, 0, 130944, 112, 0, 130945, 112, 0, 130946, 112, 0, 130947, 112, 0, 130948, 112, 0, 130949, 112, 0, 130950, 112, 0, 130951, 112, 0, 130952, 112, 0, 130953, 112, 0, 130954, 112, 0, 130955, 112, 0, 130956, 112, 0, 130958, 112, 0, 130959, 112, 0, 130960, 112, 0, 130961, 112, 0, 130957, 112, 0, 130962, 112, 0, 130963, 112, 0, 130964, 112, 0, 130965, 112, 0, 130898, 112, 0, 130897, 112, 0, 130896, 112, 0, 130895, 112, 0, 130894, 112, 0, 130893, 112, 0, 130892, 112, 0, 130891, 112, 0, 130890, 112, 0, 130889, 112, 0, 130888, 112, 0, 130887, 112, 0, 130886, 112, 0, 130885, 112, 0, 130884, 112, 0, 130883, 112, 0, 130882, 112, 0, 130881, 112, 0, 130880, 110, 1441792, 130880, 108, 1441792, 130880, 107, 1441792, 130880, 106, 1441792, 130880, 105, 1441792, 130880, 104, 1441792, 130880, 103, 1441792, 130880, 102, 1441792, 130880, 101, 1441792, 130880, 100, 1441792, 130880, 99, 1441792, 130880, 98, 1441792, 130880, 97, 1441792, 130880, 96, 1441792, 130880, 95, 1441792, 130880, 94, 1441792, 130880, 93, 1441792, 130880, 92, 1441792, 130880, 91, 1441792, 130880, 90, 1441792, 130880, 89, 1441792, 130880, 88, 1441792, 130880, 87, 1441792, 130880, 86, 1441792, 130880, 85, 1441792, 130880, 84, 1441792, 130880, 83, 1441792, 130880, 82, 1441792, 130880, 81, 1441792, 130880, 80, 1441792, 130880, 79, 1441792, 130880, 78, 1441792, 130880, 77, 1441792, 130880, 76, 1441792, 130880, 75, 1441792, 130880, 74, 1441792, 130880, 73, 1441792, 130880, 72, 1441792, 130880, 71, 1441792, 130880, 70, 1441792, 130880, 69, 1441792, 130880, 68, 1441792, 130880, 66, 1441792, 130880, 65, 1441792, 130880, 64, 1441792, 130880, 63, 1441792, 130880, 62, 1441792, 130880, 61, 1441792, 130880, 60, 1441792, 130880, 59, 1441792, 130880, 58, 1441792, 130880, 57, 1441792, 130880, 56, 1441792, 130880, 55, 1441792, 130880, 54, 1441792, 130880, 53, 1441792, 130880, 52, 1441792, 130880, 51, 1441792, 130880, 50, 1441792, 130880, 49, 1441792, 130880, 48, 1441792, 130880, 47, 1441792, 130880, 46, 1441792, 130880, 45, 1441792, 130880, 44, 1441792, 130880, 43, 1441792, 130880, 42, 1441792, 130880, 41, 1441792, 130880, 40, 1441792, 130880, 39, 1441792, 130880, 38, 1441792, 130880, 37, 1441792, 130880, 36, 1441792, 130880, 35, 1441792, 130880, 34, 1441792, 130880, 33, 1441792, 130880, 32, 1441792, 130880, 31, 1441792, 130880, 30, 1441792, 130880, 29, 1441792, 130880, 28, 1441792, 130880, 27, 1441792, 130880, 26, 1441792, 130880, 25, 1441792, 130880, 24, 1441792, 130880, 23, 1441792, 130880, 22, 1441792, 130880, 21, 1441792, 130880, 20, 1441792, 130880, 19, 1441792, 130880, 18, 1441792, 130880, 17, 1441792, 130880, 15, 1441792, 130880, 14, 1441792, 130880, 13, 1441792, 130880, 12, 1441792, 130880, 11, 1441792, 130880, 10, 1441792, 130880, 9, 1441792, 130880, 8, 1441792, 130880, 7, 1441792, 130880, 6, 1441792, 130880, 5, 1441792, 130880, 4, 1441792, 130880, 3, 1441792, 130880, 2, 1441792, 130880, 1, 1441792, 130880, 65535, 1441792, 130880, 65534, 1441792, 130880, 65533, 1441792, 130880, 65532, 1441792, 130880, 65531, 1441792, 130880, 65530, 1441792, 130880, 65529, 1441792, 130880, 65528, 1441792, 130880, 65527, 1441792, 130880, 65526, 1441792, 130880, 65525, 1441792, 130880, 65524, 1441792, 130880, 65523, 1441792, 130880, 65522, 1441792, 130880, 65521, 1441792, 130880, 65520, 1441792, 130880, 65519, 1441792, 130880, 65518, 1441792, 130880, 65517, 1441792, 130880, 65516, 1441792, 130880, 65514, 1441792, 130880, 65513, 1441792, 130880, 65512, 1441792, 130880, 65511, 1441792, 130880, 65510, 1441792, 130880, 65509, 1441792, 130880, 65508, 1441792, 130880, 65507, 1441792, 130880, 65506, 1441792, 130880, 65505, 1441792, 130880, 65504, 1441792, 130880, 65503, 1441792, 130880, 65502, 1441792, 130880, 65501, 1441792, 130880, 65500, 1441792, 130880, 65499, 1441792, 130880, 65498, 1441792, 130880, 65497, 1441792, 130880, 65496, 1441792, 130880, 65495, 1441792, 130880, 65494, 1441792, 130880, 65493, 1441792, 130880, 65492, 1441792, 130880, 65491, 1441792, 130880, 65490, 1441792, 130880, 65489, 1441792, 130880, 65488, 1441792, 130880, 65487, 1441792, 130880, 65486, 1441792, 130880, 65485, 1441792, 130880, 65484, 1441792, 130880, 65483, 1441792, 130880, 65482, 1441792, 130880, 65481, 1441792, 130880, 65480, 1441792, 130880, 65479, 1441792, 130880, 65478, 1441792, 130880, 65477, 1441792, 130880, 65476, 1441792, 130880, 65475, 1441792, 130880, 65474, 1441792, 130880, 65473, 1441792, 130880, 65472, 1441792, 130880, 65471, 1441792, 130880, 65470, 1441792, 130880, 65469, 1441792, 130880, 65468, 1441792, 130880, 65467, 1441792, 130880, 65466, 1441792, 130880, 65465, 1441792, 130880, 65464, 1441792, 130880, 65463, 1441792, 130880, 65462, 1441792, 130880, 65461, 1441792, 130880, 65460, 1441792, 130880, 65453, 1441792, 130880, 65452, 1441792, 130880, 65451, 1441792, 130880, 65450, 1441792, 130880, 65449, 1441792, 130880, 65448, 1441792, 130880, 65447, 1441792, 130880, 65459, 1441792, 130880, 65458, 1441792, 130880, 65457, 1441792, 130880, 65456, 1441792, 130880, 65455, 1441792, 130880, 65454, 1441792, 130880, 65446, 1441792, 130880, 65445, 1441792, 130880, 65444, 1441792, 130880, 65443, 1441792, 130880, 65442, 1441792, 130880, 65441, 1441792, 130880, 65440, 1441792, 130880, 65439, 1441792, 130880, 65438, 1441792, 130880, 65437, 1441792, 130880, 65436, 1441792, 130880, 65435, 1441792, 130880, 65434, 1441792, 130880, 65433, 1441792, 130880, 65432, 1441792, 130880, 65431, 1441792, 130880, 65430, 1441792, 130880, 65429, 1441792, 130880, 65428, 1441792, 130880, 65427, 1441792, 130880, 65426, 1441792, 130880, 65425, 1441792, 130880, 65424, 1441792, 130880, 65422, 1048576, 130880, 65421, 1048576, 130880, 65420, 1048576, 130880, 65419, 1048576, 130881, 65418, 655360, 130882, 65418, 655360, 130883, 65418, 655360, 130884, 65418, 655360, 130885, 65418, 655360, 130886, 65418, 655360, 130887, 65418, 655360, 130888, 65418, 655360, 130889, 65418, 655360, 130890, 65418, 655360, 130891, 65418, 655360, 130892, 65418, 655360, 130893, 65418, 655360, 130894, 65418, 655360, 130895, 65418, 655360, 130896, 65418, 655360, 130897, 65418, 655360, 130898, 65418, 655360, 130899, 65418, 655360, 130900, 65418, 655360, 130901, 65418, 655360, 130902, 65418, 655360, 130903, 65418, 655360, 130904, 65418, 655360, 130905, 65418, 655360, 130906, 65418, 655360, 130907, 65418, 655360, 130908, 65418, 655360, 130909, 65418, 655360, 130910, 65418, 655360, 130911, 65418, 655360, 130912, 65418, 655360, 130913, 65418, 655360, 130914, 65418, 655360, 130915, 65418, 655360, 130916, 65418, 655360, 130917, 65418, 655360, 130918, 65418, 655360, 130919, 65418, 655360, 130920, 65418, 655360, 130921, 65418, 655360, 130922, 65418, 655360, 130923, 65418, 655360, 130924, 65418, 655360, 130925, 65418, 655360, 130926, 65418, 655360, 130927, 65418, 655360, 130928, 65418, 655360, 130929, 65418, 655360, 130930, 65418, 655360, 130931, 65418, 655360, 130932, 65418, 655360, 130933, 65418, 655360, 130934, 65418, 655360, 130935, 65418, 655360, 130936, 65418, 655360, 130937, 65418, 655360, 130938, 65418, 655360, 130939, 65418, 655360, 130940, 65418, 655360, 130941, 65418, 655360, 130942, 65418, 655360, 130943, 65418, 655360, 130944, 65418, 655360, 130945, 65418, 655360, 130946, 65418, 655360, 130947, 65418, 655360, 130948, 65418, 655360, 130949, 65418, 655360, 130950, 65418, 655360, 130951, 65418, 655360, 130952, 65418, 655360, 130953, 65418, 655360, 130954, 65418, 655360, 130955, 65418, 655360, 130956, 65418, 655360, 130957, 65418, 655360, 130958, 65418, 655360, 130959, 65418, 655360, 130960, 65418, 655360, 130961, 65418, 655360, 130962, 65418, 655360, 130963, 65418, 655360, 130964, 65418, 655360, 130965, 65418, 655360, 130966, 65418, 0, 130966, 65419, 1441792, 130966, 65420, 1441792, 130966, 65421, 1441792, 130966, 65422, 1441792, 130966, 65423, 1441792, 130966, 65424, 1441792, 130966, 65425, 1441792, 130966, 65426, 1441792, 130966, 65427, 1441792, 130966, 65428, 1441792, 130966, 65429, 1441792, 130966, 65430, 1441792, 130966, 65431, 1441792, 130966, 65432, 1441792, 130966, 65433, 1441792, 130966, 65434, 1441792, 130966, 65435, 1441792, 130966, 65436, 1441792, 130966, 65437, 1441792, 130966, 65438, 1441792, 130966, 65439, 1441792, 130966, 65440, 1441792, 130966, 65441, 1441792, 130966, 65442, 1441792, 130966, 65443, 1441792, 130966, 65444, 1441792, 130966, 65445, 1441792, 130966, 65446, 1441792, 130966, 65447, 1441792, 130966, 65448, 1441792, 130966, 65449, 1441792, 130966, 65450, 1441792, 130966, 65451, 1441792, 130966, 65452, 1441792, 130966, 65453, 1441792, 130966, 65454, 1441792, 130966, 65455, 1441792, 130966, 65456, 1441792, 130966, 65457, 1441792, 130966, 65458, 1441792, 130966, 65459, 1441792, 130966, 65460, 1441792, 130966, 65461, 1441792, 130966, 65462, 1441792, 130966, 65463, 1441792, 130966, 65464, 1441792, 130966, 65465, 1441792, 130966, 65466, 1441792, 130966, 65467, 1441792, 130966, 65468, 1441792, 130966, 65469, 1441792, 130966, 65470, 1441792, 130966, 65471, 1441792, 130966, 65472, 1441792, 130966, 65473, 1441792, 130966, 65474, 1441792, 130966, 65475, 1441792, 130966, 65476, 1441792, 130966, 65477, 1441792, 130966, 65478, 1441792, 130966, 65479, 1441792, 130966, 65480, 1441792, 130966, 65481, 1441792, 130966, 65482, 1441792, 130966, 65483, 1441792, 130966, 65484, 1441792, 130966, 65485, 1441792, 130966, 65486, 1441792, 130966, 65487, 1441792, 130966, 65488, 1441792, 130966, 65489, 1441792, 130966, 65490, 1441792, 130966, 65491, 1441792, 130966, 65492, 1441792, 130966, 65493, 1441792, 130966, 65494, 1441792, 130966, 65495, 1441792, 130966, 65496, 1441792, 130966, 65497, 1441792, 130966, 65498, 1441792, 130966, 65499, 1441792, 130966, 65500, 1441792, 130966, 65501, 1441792, 130966, 65502, 1441792, 130966, 65503, 1441792, 130966, 65504, 1441792, 130966, 65505, 1441792, 130966, 65506, 1441792, 130966, 65507, 1441792, 130966, 65508, 1441792, 130966, 65509, 1441792, 130966, 65510, 1441792, 130966, 65511, 1441792, 130966, 65512, 1441792, 130966, 65513, 1441792, 130966, 65514, 1441792, 130966, 65515, 1441792, 130966, 65516, 1441792, 130966, 65517, 1441792, 130966, 65518, 1441792, 130966, 65519, 1441792, 130966, 65520, 1441792, 130966, 65521, 1441792, 130966, 65522, 1441792, 130966, 65523, 1441792, 130966, 65524, 1441792, 130966, 65525, 1441792, 130966, 65526, 1441792, 130966, 65527, 1441792, 130966, 65528, 1441792, 130966, 65530, 1441792, 130966, 65531, 1441792, 130966, 65532, 1441792, 130966, 65533, 1441792, 130966, 65534, 1441792, 130966, 65535, 1441792, 130966, 0, 1441792, 130966, 1, 1441792, 130966, 2, 1441792, 130966, 3, 1441792, 130966, 4, 1441792, 130966, 5, 1441792, 130966, 6, 1441792, 130966, 7, 1441792, 130966, 8, 1441792, 130966, 9, 1441792, 130966, 10, 1441792, 130966, 11, 1441792, 130966, 12, 1441792, 130966, 13, 1441792, 130966, 14, 1441792, 130966, 15, 1441792, 130966, 16, 1441792, 130966, 17, 1441792, 130966, 18, 1441792, 130966, 19, 1441792, 130966, 20, 1441792, 130966, 21, 1441792, 130966, 22, 1441792, 130966, 23, 1441792, 130966, 24, 1441792, 130966, 25, 1441792, 130966, 26, 1441792, 130966, 27, 1441792, 130966, 28, 1441792, 130966, 29, 1441792, 130966, 30, 1441792, 130966, 31, 1441792, 130966, 32, 1441792, 130966, 33, 1441792, 130966, 34, 1441792, 130966, 35, 1441792, 130966, 36, 1441792, 130966, 37, 1441792, 130966, 38, 1441792, 130966, 39, 1441792, 130966, 40, 1441792, 130966, 41, 1441792, 130966, 42, 1441792, 130966, 43, 1441792, 130966, 44, 1441792, 130966, 45, 1441792, 130966, 46, 1441792, 130966, 47, 1441792, 130966, 48, 1441792, 130966, 49, 1441792, 130966, 50, 1441792, 130966, 51, 1441792, 130966, 52, 1441792, 130966, 53, 1441792, 130966, 54, 1441792, 130966, 55, 1441792, 130966, 56, 1441792, 130966, 57, 1441792, 130966, 58, 1441792, 130966, 59, 1441792, 130966, 60, 1441792, 130966, 61, 1441792, 130966, 62, 1441792, 130966, 63, 1441792, 130966, 64, 1441792, 130966, 65, 1441792, 130966, 66, 1441792, 130966, 67, 1441792, 130966, 68, 1441792, 130966, 69, 1441792, 130966, 70, 1441792, 130966, 71, 1441792, 130966, 72, 1441792, 130966, 73, 1441792, 130966, 74, 1441792, 130966, 75, 1441792, 130966, 76, 1441792, 130966, 77, 1441792, 130966, 78, 1441792, 130966, 79, 1441792, 130966, 80, 1441792, 130966, 81, 1441792, 130966, 82, 1441792, 130966, 83, 1441792, 130966, 84, 1441792, 130966, 85, 1441792, 130966, 86, 1441792, 130966, 87, 1441792, 130966, 88, 1441792, 130966, 89, 1441792, 130966, 90, 1441792, 130966, 91, 1441792, 130966, 92, 1441792, 130966, 93, 1441792, 130966, 94, 1441792, 130966, 95, 1441792, 130966, 96, 1441792, 130966, 97, 1441792, 130966, 98, 1441792, 130966, 99, 1441792, 130966, 100, 1441792, 130966, 101, 1441792, 130966, 102, 1441792, 130966, 103, 1441792, 130966, 104, 1441792, 130966, 105, 1441792, 130966, 106, 1441792, 130966, 107, 1441792, 130966, 108, 1441792, 130966, 109, 1441792, 130966, 110, 1441792, 130966, 111, 1441792, 130918, 26, 655360, 130893, 65327, 196608, 130885, 168, 196608, 131070, 42, 131072, 131071, 31, 131072, 131071, 26, 131072, 131071, 22, 131072, 131071, 20, 131072, 131071, 25, 131072, 131071, 33, 131072, 131070, 57, 131072)
 }
-metadata/_editor_floor_ = Vector3(0, 4, 0)
+metadata/_editor_floor_ = Vector3(0, 1, 0)
+
+[node name="SM_Fence4" type="MeshInstance3D" parent="SM_Boarder"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -289.011, 7.16832, -1.88608)
+mesh = SubResource("BoxMesh_ps3lr")
+skeleton = NodePath("../..")
+
+[node name="SM_Fence6" type="MeshInstance3D" parent="SM_Boarder"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -233.044, 7.16832, -1.88608)
+mesh = SubResource("BoxMesh_ps3lr")
+skeleton = NodePath("../..")
+
+[node name="SM_Fence2" type="MeshInstance3D" parent="SM_Boarder"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -371.837, 7.16833, -1.88957)
+mesh = SubResource("BoxMesh_ps3lr")
+skeleton = NodePath("../..")
+
+[node name="SM_Fence_02" type="MeshInstance3D" parent="SM_Boarder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -297.901, 7.04995, 98.7538)
+mesh = SubResource("BoxMesh_smbp1")
+skeleton = NodePath("../..")
+
+[node name="SM_Fence_01" type="MeshInstance3D" parent="SM_Boarder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -297.901, 7.04995, -100.832)
+mesh = SubResource("BoxMesh_smbp1")
+skeleton = NodePath("../..")
+
+[node name="SM_Fence_03" type="MeshInstance3D" parent="SM_Boarder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -297.901, 7.04995, -10.9912)
+mesh = SubResource("BoxMesh_smbp1")
+skeleton = NodePath("../..")
+
+[node name="SM_Fence_05" type="MeshInstance3D" parent="SM_Boarder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -297.901, 7.04995, -90.0477)
+mesh = SubResource("BoxMesh_smbp1")
+skeleton = NodePath("../..")
+
+[node name="SM_Fence_04" type="MeshInstance3D" parent="SM_Boarder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -298.203, 7.04996, 8.6713)
+mesh = SubResource("BoxMesh_smbp1")
+skeleton = NodePath("../..")
+
+[node name="SM_Fence_06" type="MeshInstance3D" parent="SM_Boarder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -298.203, 7.04996, 88.7413)
+mesh = SubResource("BoxMesh_smbp1")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3d" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37081e-08, 5.34022e-10, 1, 0.012217, 0.999925, 0, -0.999925, 0.012217, -4.37114e-08, -262.577, 6.4617, 43.1612)
+mesh = SubResource("PlaneMesh_tph1s")
+
+[node name="SM_WatchTower" type="Node3D" parent="."]
+
+[node name="SM_WatchTower_01" parent="SM_WatchTower" instance=ExtResource("6_7gbll")]
+transform = Transform3D(0.670375, 0, 0.742023, 0, 1, 0, -0.742023, 0, 0.670375, -236.257, 5.67153, -2.7654)
+
+[node name="SM_WatchTower_02" parent="SM_WatchTower" instance=ExtResource("6_7gbll")]
+transform = Transform3D(0.124762, 0, 0.992187, 0, 1, 0, -0.992187, 0, 0.124762, -358.376, 5.67153, -5.11753)
+
+[node name="SM_WatchTower_03" parent="SM_WatchTower" instance=ExtResource("6_7gbll")]
+transform = Transform3D(-0.747636, 0, -0.664109, 0, 1, 0, 0.664109, 0, -0.747636, -355.577, 5.67153, 168.232)
+
+[node name="SM_WatchTower_04" parent="SM_WatchTower" instance=ExtResource("6_7gbll")]
+transform = Transform3D(0.847761, 0, -0.530378, 0, 1, 0, 0.530378, 0, 0.847761, -236.698, 5.67153, 168.232)
+
+[node name="SM_Barrack2" type="Node3D" parent="."]
+
+[node name="SM_Barrack" parent="SM_Barrack2" instance=ExtResource("7_bpvpl")]
+transform = Transform3D(0.00404917, 0, -0.999992, 0, 1, 0, 0.999992, 0, 0.00404917, -260.2, 5.56195, 9.92373)
+
+[node name="SM_Barrack2" parent="SM_Barrack2" instance=ExtResource("7_bpvpl")]
+transform = Transform3D(0.00404917, 0, -0.999992, 0, 1, 0, 0.999992, 0, 0.00404917, -260.2, 5.56195, 31.8467)
+
+[node name="SM_Barrack3" parent="SM_Barrack2" instance=ExtResource("7_bpvpl")]
+transform = Transform3D(0.00404917, 0, -0.999992, 0, 1, 0, 0.999992, 0, 0.00404917, -260.2, 5.56195, 54.2053)
+
+[node name="SM_Tunnel_Tent" type="Node3D" parent="."]
+
+[node name="SM_Tunnel_Tent_01" parent="SM_Tunnel_Tent" instance=ExtResource("8_jht02")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -344.639, 5.40767, 11.1801)
+
+[node name="SM_Tunnel_Tent_02" parent="SM_Tunnel_Tent" instance=ExtResource("8_jht02")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -319.856, 5.40767, 11.1801)
+
+[node name="SM_Tunnel_Tent_03" parent="SM_Tunnel_Tent" instance=ExtResource("8_jht02")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -319.856, 5.40767, 47.95)
+
+[node name="SM_Tunnel_Tent_04" parent="SM_Tunnel_Tent" instance=ExtResource("8_jht02")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -343.494, 5.40767, 47.95)
+
+[node name="SM_Shipping_Container" type="Node3D" parent="."]
+
+[node name="SM_Shipping_Container_01" parent="SM_Shipping_Container" instance=ExtResource("8_t4tvt")]
+transform = Transform3D(0.999203, 0, 0.0399225, 0, 1, 0, -0.0399225, 0, 0.999203, -366.424, 5.5329, 7.1339)
+
+[node name="SM_SandBag_Barrier" type="Node3D" parent="."]
+
+[node name="SM_Sandbag_Barrier_01" parent="SM_SandBag_Barrier" instance=ExtResource("7_rljq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -242.105, 5.35687, 20.5182)
+
+[node name="SM_Sandbag_Barrier_03" parent="SM_SandBag_Barrier" instance=ExtResource("7_rljq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -243.066, 5.35687, 24.7684)
+
+[node name="SM_Sandbag_Barrier_04" parent="SM_SandBag_Barrier" instance=ExtResource("7_rljq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -243.066, 5.35687, 15.0477)
+
+[node name="SM_Sandbag_Barrier_02" parent="SM_SandBag_Barrier" instance=ExtResource("7_rljq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -242.105, 5.62242, 46.9195)
+
+[node name="SM_Sandbag_Barrier_05" parent="SM_SandBag_Barrier" instance=ExtResource("7_rljq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -240.645, 5.62242, 40.2064)
+
+[node name="SM_Sandbag_Barrier_06" parent="SM_SandBag_Barrier" instance=ExtResource("7_rljq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -240.645, 5.62242, 51.8199)
+
+[node name="SM_WaterTank" type="Node3D" parent="."]
+
+[node name="SM_WaterTank_01" parent="SM_WaterTank" instance=ExtResource("11_emadj")]
+transform = Transform3D(0.319042, 0, -0.94774, 0, 1, 0, 0.94774, 0, 0.319042, -383.912, 5.10107, 187.295)
+
+[node name="SM_WaterTank_02" parent="SM_WaterTank" instance=ExtResource("11_emadj")]
+transform = Transform3D(0.319042, 0, -0.94774, -0.0245609, 0.999664, -0.00826805, 0.947422, 0.0259152, 0.318935, -219.486, 7.96632, 188.292)
+
+[node name="SM_WaterTank_03" parent="SM_WaterTank" instance=ExtResource("11_emadj")]
+transform = Transform3D(0.319042, 0, -0.94774, 0, 1, 0, 0.94774, 0, 0.319042, -218.989, 5.10107, -24.8099)
+
+[node name="SM_WaterTank_04" parent="SM_WaterTank" instance=ExtResource("11_emadj")]
+transform = Transform3D(0.0911019, 0, -0.995842, 0, 1, 0, 0.995842, 0, 0.0911019, -375.412, 5.10107, -24.509)

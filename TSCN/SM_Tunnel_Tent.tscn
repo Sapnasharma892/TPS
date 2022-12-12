@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjo54lpoxi745"]
+
+[ext_resource type="ArrayMesh" uid="uid://dvf8hmxwdwfyq" path="res://TRES/TunnelTent/SM_Tunnel_Tent.tres" id="1_bf4la"]
+
+[node name="Node3d" type="Node3D"]
+
+[node name="MeshInstance3d" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_bf4la")

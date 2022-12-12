@@ -1,50 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://c7p7bvakl0bs7"]
+[gd_scene load_steps=4 format=3 uid="uid://c7p7bvakl0bs7"]
 
 [ext_resource type="ArrayMesh" uid="uid://b6xj8usl2yh41" path="res://TRES/SandBags/SM_SandBagBarrier_End.tres" id="1_drpvi"]
 [ext_resource type="ArrayMesh" uid="uid://bkkw6m8xsu32s" path="res://TRES/SandBags/SM_SandBag_Barrier_Mid.tres" id="2_3smcr"]
 [ext_resource type="ArrayMesh" uid="uid://3jf1kypglxhd" path="res://TRES/SandBags/SM_SandbagBarrier_Start.tres" id="3_36unm"]
-[ext_resource type="ArrayMesh" uid="uid://62ihaphmlj4o" path="res://TRES/Car/SM_Truck.tres" id="4_o41x8"]
 
 [node name="Node3d" type="Node3D"]
 
 [node name="MeshInstance3d" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_drpvi")
 
-[node name="MeshInstance3d2" type="MeshInstance3D" parent="."]
-mesh = ExtResource("2_3smcr")
-
 [node name="MeshInstance3d4" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.6969)
-mesh = ExtResource("2_3smcr")
-
-[node name="MeshInstance3d5" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.3926)
-mesh = ExtResource("2_3smcr")
-
-[node name="MeshInstance3d6" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.86276)
-mesh = ExtResource("2_3smcr")
-
-[node name="MeshInstance3d7" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.559)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0488876)
 mesh = ExtResource("2_3smcr")
 
 [node name="MeshInstance3d8" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.0516)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.64629)
 mesh = ExtResource("2_3smcr")
 
 [node name="MeshInstance3d3" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0323969, 0, -7.91128)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0323969, 0, -1.55359)
 mesh = ExtResource("3_36unm")
-
-[node name="MeshInstance3d9" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.33725, 0, 0.777184)
-mesh = ExtResource("4_o41x8")
-
-[node name="MeshInstance3d10" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.33725, 0, -3.50997)
-mesh = ExtResource("4_o41x8")
-
-[node name="MeshInstance3d11" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.33725, 0, -8.73967)
-mesh = ExtResource("4_o41x8")
