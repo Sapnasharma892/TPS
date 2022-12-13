@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bc4x30ksxq2r8"]
+
+[ext_resource type="ArrayMesh" uid="uid://bpvg7n1eadtpq" path="res://TRES/Vehicles/Jeep/SM_Jeep_01.tres" id="1_030ur"]
+
+[node name="Node3d" type="Node3D"]
+
+[node name="SM_Jeep_01" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_030ur")

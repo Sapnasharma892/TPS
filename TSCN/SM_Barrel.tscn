@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://brtk5xw4hp0l2"]
+
+[ext_resource type="ArrayMesh" uid="uid://byh3ppsoi5lgm" path="res://TRES/Barrel/SM_Barrel_01.tres" id="1_r35pf"]
+[ext_resource type="ArrayMesh" uid="uid://ckrg2qbxop4et" path="res://TRES/Barrel/SM_Barrel_02.tres" id="2_be8lv"]
+
+[node name="Node3d" type="Node3D"]
+
+[node name="SM_Barrel_01" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_r35pf")
+
+[node name="SM_Barrel_03" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.887704)
+mesh = ExtResource("1_r35pf")
+
+[node name="SM_Barrel_04" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.71579, 0, -0.698315, 0, 1, 0, 0.698315, 0, 0.71579, -0.873596, 0, 0.887704)
+mesh = ExtResource("1_r35pf")
+
+[node name="SM_Barrel_02" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.895306, 0, 0)
+mesh = ExtResource("2_be8lv")
+
+[node name="SM_Barrel_05" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.835091, 0, 0)
+mesh = ExtResource("2_be8lv")
+
+[node name="SM_Barrel_06" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.835091, 0, 0.868572)
+mesh = ExtResource("2_be8lv")

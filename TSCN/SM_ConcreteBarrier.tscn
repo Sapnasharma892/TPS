@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://by41e7h5mc76n"]
+
+[ext_resource type="ArrayMesh" uid="uid://cavw5xiew63cd" path="res://TRES/Barrier/SM_ConcreteBarrier.tres" id="1_vg2hv"]
+
+[node name="Node3d" type="Node3D"]
+
+[node name="SM_ConcreteBarrier" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_vg2hv")

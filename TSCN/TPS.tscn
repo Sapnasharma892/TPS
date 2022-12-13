@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://b0xgyx05flkf5"]
+[gd_scene load_steps=26 format=3 uid="uid://b0xgyx05flkf5"]
 
 [ext_resource type="Texture2D" uid="uid://brqy4xgqateky" path="res://Textures/Textures_DessertTerrain/Textures_DessertTerrain/Dessert_Color.png" id="1_0d3ep"]
 [ext_resource type="Texture2D" uid="uid://bkbvdco7tdxgy" path="res://Textures/Textures_DessertTerrain/Textures_DessertTerrain/Dessert_Height.png" id="1_dl1wv"]
@@ -13,6 +13,10 @@
 [ext_resource type="MeshLibrary" uid="uid://3vxeo0ine6fi" path="res://Mesh/Fence.meshlib" id="12_0wsit"]
 [ext_resource type="PackedScene" uid="uid://bvfff8io1gamb" path="res://TSCN/SM_Oil_Tank.tscn" id="12_gm4kk"]
 [ext_resource type="PackedScene" uid="uid://dwgu67q08jpd5" path="res://TSCN/SM_Tank.tscn" id="13_nhjgf"]
+[ext_resource type="PackedScene" uid="uid://j54ga66q5bk8" path="res://TSCN/SM_Tent_01.tscn" id="14_6qgcm"]
+[ext_resource type="PackedScene" uid="uid://c04f5tcbje40h" path="res://TSCN/SM_Truck_02.tscn" id="14_mxtt0"]
+[ext_resource type="PackedScene" uid="uid://brtk5xw4hp0l2" path="res://TSCN/SM_Barrel.tscn" id="15_rd03g"]
+[ext_resource type="PackedScene" uid="uid://by41e7h5mc76n" path="res://TSCN/SM_ConcreteBarrier.tscn" id="16_3e31i"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lb54c"]
 render_priority = 0
@@ -148,7 +152,7 @@ transform = Transform3D(0.00404917, 0, -0.999992, 0, 1, 0, 0.999992, 0, 0.004049
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -344.639, 5.40767, 11.1801)
 
 [node name="SM_Tunnel_Tent_02" parent="SM_Tunnel_Tent" instance=ExtResource("8_jht02")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -319.856, 5.40767, 11.1801)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -319.856, 5.35686, 11.1801)
 
 [node name="SM_Tunnel_Tent_03" parent="SM_Tunnel_Tent" instance=ExtResource("8_jht02")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -319.856, 5.40767, 47.95)
@@ -160,6 +164,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -343.494, 5.40767, 47.95)
 
 [node name="SM_Shipping_Container_01" parent="SM_Shipping_Container" instance=ExtResource("8_t4tvt")]
 transform = Transform3D(0.999203, 0, 0.0399225, 0, 1, 0, -0.0399225, 0, 0.999203, -366.424, 5.5329, 7.1339)
+
+[node name="SM_Shipping_Container_02" parent="SM_Shipping_Container" instance=ExtResource("8_t4tvt")]
+transform = Transform3D(0.718369, 0, 0.695662, 0, 1, 0, -0.695662, 0, 0.718369, -366.88, 5.66194, 16.9026)
+
+[node name="SM_Shipping_Container_03" parent="SM_Shipping_Container" instance=ExtResource("8_t4tvt")]
+transform = Transform3D(0.746116, 0, 0.665817, 0, 1, 0, -0.665817, 0, 0.746116, -367.354, 5.5329, 25.6589)
 
 [node name="SM_SandBag_Barrier" type="Node3D" parent="."]
 
@@ -198,21 +208,15 @@ transform = Transform3D(0.0911019, 0, -0.995842, 0, 1, 0, 0.995842, 0, 0.0911019
 [node name="SM_OIl_Tank" type="Node3D" parent="."]
 
 [node name="SM_Oil_Tank_01" parent="SM_OIl_Tank" instance=ExtResource("12_gm4kk")]
-transform = Transform3D(-0.999799, 0, 0.0200526, 0, 1, 0, -0.0200526, 0, -0.999799, -241.576, 5.47152, 99.4343)
+transform = Transform3D(-0.999799, 0, 0.0200526, 0, 1, 0, -0.0200526, 0, -0.999799, -242.094, 5.47152, 99.4343)
 
 [node name="SM_Oil_Tank_02" parent="SM_OIl_Tank" instance=ExtResource("12_gm4kk")]
-transform = Transform3D(-0.999895, 0, -0.0144857, 0, 1, 0, 0.0144857, 0, -0.999895, -242.168, 5.47152, 104.809)
-
-[node name="SM_Oil_Tank_03" parent="SM_OIl_Tank" instance=ExtResource("12_gm4kk")]
 transform = Transform3D(-0.999895, 0, -0.0144857, 0, 1, 0, 0.0144857, 0, -0.999895, -242.168, 5.47152, 110.326)
 
-[node name="SM_Oil_Tank_04" parent="SM_OIl_Tank" instance=ExtResource("12_gm4kk")]
+[node name="SM_Oil_Tank_03" parent="SM_OIl_Tank" instance=ExtResource("12_gm4kk")]
 transform = Transform3D(-0.999895, 0, -0.0144857, 0, 1, 0, 0.0144857, 0, -0.999895, -251.296, 5.47152, 110.326)
 
 [node name="SM_Oil_Tank_05" parent="SM_OIl_Tank" instance=ExtResource("12_gm4kk")]
-transform = Transform3D(-0.999895, 0, -0.0144857, 0, 1, 0, 0.0144857, 0, -0.999895, -251.296, 5.47152, 104.726)
-
-[node name="SM_Oil_Tank_06" parent="SM_OIl_Tank" instance=ExtResource("12_gm4kk")]
 transform = Transform3D(-0.999895, 0, -0.0144857, 0, 1, 0, 0.0144857, 0, -0.999895, -251.296, 5.47152, 99.277)
 
 [node name="GridMap_Fence2" type="Node3D" parent="."]
@@ -248,3 +252,57 @@ transform = Transform3D(0.0249904, 0, 0.999688, 0, 1, 0, -0.999688, 0, 0.0249904
 
 [node name="SM_Tank_02" parent="SM_Vehicles" instance=ExtResource("13_nhjgf")]
 transform = Transform3D(0.0249904, 0, 0.999688, 0, 1, 0, -0.999688, 0, 0.0249904, -241.046, 5.54341, 150.342)
+
+[node name="SM_Tank_03" parent="SM_Vehicles" instance=ExtResource("13_nhjgf")]
+transform = Transform3D(0.562415, 0, 0.826855, 0, 1, 0, -0.826855, 0, 0.562415, -338.575, 5.54341, 63.3837)
+
+[node name="SM_Tank_04" parent="SM_Vehicles" instance=ExtResource("13_nhjgf")]
+transform = Transform3D(0.562415, 0, 0.826855, 0, 1, 0, -0.826855, 0, 0.562415, -316.726, 5.54341, 29.2638)
+
+[node name="SM_Truck_01" parent="SM_Vehicles" instance=ExtResource("14_mxtt0")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -241.091, 5.44076, 156.469)
+
+[node name="SM_Truck_02" parent="SM_Vehicles" instance=ExtResource("14_mxtt0")]
+transform = Transform3D(-0.999346, 0, -0.0361729, 0, 1, 0, 0.0361729, 0, -0.999346, -334.986, 5.44076, 19.9606)
+
+[node name="SM_Tent" type="Node3D" parent="."]
+
+[node name="SM_Tent_01" parent="SM_Tent" instance=ExtResource("14_6qgcm")]
+transform = Transform3D(-0.0596897, 0, -0.998217, 0, 1, 0, 0.998217, 0, -0.0596897, -247.04, 6.82355, 136.531)
+
+[node name="SM_Tent_02" parent="SM_Tent" instance=ExtResource("14_6qgcm")]
+transform = Transform3D(-0.0596897, 0, -0.998217, 0, 1, 0, 0.998217, 0, -0.0596897, -247.409, 6.82355, 122.703)
+
+[node name="SM_Barrel" type="Node3D" parent="."]
+
+[node name="SM_Barrel_01" parent="SM_Barrel" instance=ExtResource("15_rd03g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -295.33, 5.49399, 80.9703)
+
+[node name="SM_Barrel_02" parent="SM_Barrel" instance=ExtResource("15_rd03g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -295.33, 5.49399, 152.461)
+
+[node name="SM_Barrel_03" parent="SM_Barrel" instance=ExtResource("15_rd03g")]
+transform = Transform3D(0.652389, 0, -0.757884, 0, 1, 0, 0.757884, 0, 0.652389, -301.63, 5.41938, 16.9139)
+
+[node name="SM_Barrel_04" parent="SM_Barrel" instance=ExtResource("15_rd03g")]
+transform = Transform3D(-0.999779, 0, 0.0209948, 0, 1, 0, -0.0209948, 0, -0.999779, -300.109, 5.75515, -10.026)
+
+[node name="SM_Barrel_05" parent="SM_Barrel" instance=ExtResource("15_rd03g")]
+transform = Transform3D(0.0394866, 0, -0.99922, 0, 1, 0, 0.99922, 0, 0.0394866, -362.982, 5.45016, 4.07574)
+
+[node name="SM_ConcreteBarrier" type="Node3D" parent="."]
+
+[node name="SM_ConcreteBarrier_01" parent="SM_ConcreteBarrier" instance=ExtResource("16_3e31i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -305.24, 5.47934, 14.7138)
+
+[node name="SM_ConcreteBarrier_02" parent="SM_ConcreteBarrier" instance=ExtResource("16_3e31i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -303.92, 5.47934, 14.7138)
+
+[node name="SM_ConcreteBarrier_03" parent="SM_ConcreteBarrier" instance=ExtResource("16_3e31i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -302.549, 5.47934, 14.7138)
+
+[node name="SM_ConcreteBarrier_04" parent="SM_ConcreteBarrier" instance=ExtResource("16_3e31i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -301.202, 5.47934, 14.7138)
+
+[node name="SM_ConcreteBarrier_05" parent="SM_ConcreteBarrier" instance=ExtResource("16_3e31i")]
+transform = Transform3D(-0.128899, 0, -0.991658, 0, 1, 0, 0.991658, 0, -0.128899, -299.911, 5.47934, 14.7138)
