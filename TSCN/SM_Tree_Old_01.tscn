@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://x070ucyecf7k"]
-
-[ext_resource type="ArrayMesh" uid="uid://cu3g5661jsa58" path="res://TRES/Tree/SM_Tree_Old_01.tres" id="1_h871c"]
-
-[node name="Node3d" type="Node3D"]
-
-[node name="MeshInstance3d" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.014189, -0.999899, 0, 0.999899, -0.014189, 0, 0, 0)
-mesh = ExtResource("1_h871c")
