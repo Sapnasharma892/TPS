@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://vuwt1v1684w7"
-path="res://.godot/imported/Tent_01.glb-1fa5b664bd12db9a9011419afbe5f126.scn"
+uid="uid://cwis6bakwyr5f"
+path="res://.godot/imported/Jeep_01.glb-3768d67de4a5f6edbd36b883a8a88310.scn"
 
 [deps]
 
-source_file="res://GLB/GameAssets/Glb - Copy/Glb/Tent_01.glb"
-dest_files=["res://.godot/imported/Tent_01.glb-1fa5b664bd12db9a9011419afbe5f126.scn"]
+source_file="res://GLB/Vehicles/Jeep_01.glb"
+dest_files=["res://.godot/imported/Jeep_01.glb-3768d67de4a5f6edbd36b883a8a88310.scn"]
 
 [params]
 

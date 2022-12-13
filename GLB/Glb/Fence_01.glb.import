@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bfmuhb42agcuu"
-path="res://.godot/imported/Table.glb-3ff3920901d91e57904d61bfe69bb822.scn"
+uid="uid://cw6xeax4l62il"
+path="res://.godot/imported/Fence_01.glb-72ec0918dc543f1f3ba85da46a8ec9e7.scn"
 
 [deps]
 
-source_file="res://GLB/GameAssets/Glb - Copy/Glb/Table.glb"
-dest_files=["res://.godot/imported/Table.glb-3ff3920901d91e57904d61bfe69bb822.scn"]
+source_file="res://GLB/Glb/Fence_01.glb"
+dest_files=["res://.godot/imported/Fence_01.glb-72ec0918dc543f1f3ba85da46a8ec9e7.scn"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cwis6bakwyr5f"
-path="res://.godot/imported/Jeep_01.glb-656dc603b7b8a57009b21bb0d6b31695.scn"
+uid="uid://bm3vwole1omy2"
+path="res://.godot/imported/OilTank_01.glb-6723dd076265be8fd432e0203b3dba5a.scn"
 
 [deps]
 
-source_file="res://GLB/Vehicles/Vehicles/Jeep_01.glb"
-dest_files=["res://.godot/imported/Jeep_01.glb-656dc603b7b8a57009b21bb0d6b31695.scn"]
+source_file="res://GLB/Glb/OilTank_01.glb"
+dest_files=["res://.godot/imported/OilTank_01.glb-6723dd076265be8fd432e0203b3dba5a.scn"]
 
 [params]
 

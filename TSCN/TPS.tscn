@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b0xgyx05flkf5"]
+[gd_scene load_steps=27 format=3 uid="uid://b0xgyx05flkf5"]
 
 [ext_resource type="Texture2D" uid="uid://brqy4xgqateky" path="res://Textures/Textures_DessertTerrain/Textures_DessertTerrain/Dessert_Color.png" id="1_0d3ep"]
 [ext_resource type="Texture2D" uid="uid://bkbvdco7tdxgy" path="res://Textures/Textures_DessertTerrain/Textures_DessertTerrain/Dessert_Height.png" id="1_dl1wv"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://c04f5tcbje40h" path="res://TSCN/SM_Truck_02.tscn" id="14_mxtt0"]
 [ext_resource type="PackedScene" uid="uid://brtk5xw4hp0l2" path="res://TSCN/SM_Barrel.tscn" id="15_rd03g"]
 [ext_resource type="PackedScene" uid="uid://by41e7h5mc76n" path="res://TSCN/SM_ConcreteBarrier.tscn" id="16_3e31i"]
+[ext_resource type="PackedScene" uid="uid://bc4x30ksxq2r8" path="res://TSCN/SM_Jeep_01.tscn" id="18_lonsh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lb54c"]
 render_priority = 0
@@ -306,3 +307,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -301.202, 5.47934, 14.7138)
 
 [node name="SM_ConcreteBarrier_05" parent="SM_ConcreteBarrier" instance=ExtResource("16_3e31i")]
 transform = Transform3D(-0.128899, 0, -0.991658, 0, 1, 0, 0.991658, 0, -0.128899, -299.911, 5.47934, 14.7138)
+
+[node name="SM_Jeep" type="Node3D" parent="."]
+transform = Transform3D(-0.99665, 0, -0.0817819, 0, 1, 0, 0.0817819, 0, -0.99665, -294.374, 5.41658, 148.566)
+
+[node name="SM_Jeep_01" parent="SM_Jeep" instance=ExtResource("18_lonsh")]
+
+[node name="SM_Jeep_02" parent="SM_Jeep" instance=ExtResource("18_lonsh")]
+transform = Transform3D(-0.982127, 0, 0.188221, 0, 1, 0, -0.188221, 0, -0.982127, -8.8385, 0, 84.3919)

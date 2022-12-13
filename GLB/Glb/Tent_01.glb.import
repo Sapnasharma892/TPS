@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b1daq6rjtqetl"
-path="res://.godot/imported/Barrack_01.glb-033f8e12a6aeac998681e5e47c2868cc.scn"
+uid="uid://vuwt1v1684w7"
+path="res://.godot/imported/Tent_01.glb-a168fe3ed9ee745e4b09fc53e54747d2.scn"
 
 [deps]
 
-source_file="res://GLB/GameAssets/Glb - Copy/Glb/Barrack_01.glb"
-dest_files=["res://.godot/imported/Barrack_01.glb-033f8e12a6aeac998681e5e47c2868cc.scn"]
+source_file="res://GLB/Glb/Tent_01.glb"
+dest_files=["res://.godot/imported/Tent_01.glb-a168fe3ed9ee745e4b09fc53e54747d2.scn"]
 
 [params]
 

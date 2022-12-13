@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dq08a5hmwx2i3"
-path="res://.godot/imported/TunnelTent_01.glb-e49b4d678c3456fa81955e71ec9ec455.scn"
+uid="uid://c0g73g4qhdf38"
+path="res://.godot/imported/OilTank_02.glb-34367f9f5871a080c27037e0f4858819.scn"
 
 [deps]
 
-source_file="res://GLB/GameAssets/Glb - Copy/Glb/TunnelTent_01.glb"
-dest_files=["res://.godot/imported/TunnelTent_01.glb-e49b4d678c3456fa81955e71ec9ec455.scn"]
+source_file="res://GLB/Glb/OilTank_02.glb"
+dest_files=["res://.godot/imported/OilTank_02.glb-34367f9f5871a080c27037e0f4858819.scn"]
 
 [params]
 

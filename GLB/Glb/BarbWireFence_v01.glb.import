@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dxwyhu7e4mm6"
-path="res://.godot/imported/BarrelDamaged_01.glb-81303c097ed56e592dafe1434d7be54d.scn"
+uid="uid://bm1bqkdnjwlqg"
+path="res://.godot/imported/BarbWireFence_v01.glb-94d23cbb0dc2275cfb47aa358a558faf.scn"
 
 [deps]
 
-source_file="res://GLB/GameAssets/Glb - Copy/Glb/BarrelDamaged_01.glb"
-dest_files=["res://.godot/imported/BarrelDamaged_01.glb-81303c097ed56e592dafe1434d7be54d.scn"]
+source_file="res://GLB/Glb/BarbWireFence_v01.glb"
+dest_files=["res://.godot/imported/BarbWireFence_v01.glb-94d23cbb0dc2275cfb47aa358a558faf.scn"]
 
 [params]
 

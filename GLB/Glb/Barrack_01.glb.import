@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c0g73g4qhdf38"
-path="res://.godot/imported/OilTank_02.glb-4b1bfeb6e2e21453b8e13130cbcf25f3.scn"
+uid="uid://b1daq6rjtqetl"
+path="res://.godot/imported/Barrack_01.glb-c80ee04b132d043425d0171471516983.scn"
 
 [deps]
 
-source_file="res://GLB/GameAssets/Glb - Copy/Glb/OilTank_02.glb"
-dest_files=["res://.godot/imported/OilTank_02.glb-4b1bfeb6e2e21453b8e13130cbcf25f3.scn"]
+source_file="res://GLB/Glb/Barrack_01.glb"
+dest_files=["res://.godot/imported/Barrack_01.glb-c80ee04b132d043425d0171471516983.scn"]
 
 [params]
 

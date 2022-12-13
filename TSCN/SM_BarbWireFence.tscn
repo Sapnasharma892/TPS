@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cy4cku1n3vwxt"]
+
+[ext_resource type="ArrayMesh" uid="uid://b3t7q4hm4yx2x" path="res://TRES/Fence/SM_BarbWireFence.tres" id="1_hqkti"]
+
+[node name="Node3d" type="Node3D"]
+
+[node name="SM_BarbWireFence" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_hqkti")

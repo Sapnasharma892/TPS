@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bm3vwole1omy2"
-path="res://.godot/imported/OilTank_01.glb-56e7f9f6b343eda2778ca18bb5ef6943.scn"
+uid="uid://dxwyhu7e4mm6"
+path="res://.godot/imported/BarrelDamaged_01.glb-cf28d47b1d38467a85a9ba439b0fa217.scn"
 
 [deps]
 
-source_file="res://GLB/GameAssets/Glb - Copy/Glb/OilTank_01.glb"
-dest_files=["res://.godot/imported/OilTank_01.glb-56e7f9f6b343eda2778ca18bb5ef6943.scn"]
+source_file="res://GLB/Glb/BarrelDamaged_01.glb"
+dest_files=["res://.godot/imported/BarrelDamaged_01.glb-cf28d47b1d38467a85a9ba439b0fa217.scn"]
 
 [params]
 

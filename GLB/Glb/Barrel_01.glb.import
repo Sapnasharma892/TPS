@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cqxctib7vthiq"
-path="res://.godot/imported/Truck_01.glb-1cadf8374c93d77f6c6faf5a3555d513.scn"
+uid="uid://bhms2jtafhsn"
+path="res://.godot/imported/Barrel_01.glb-85b98bbf08095d47b95ca3c14f94ed74.scn"
 
 [deps]
 
-source_file="res://GLB/Vehicles/Vehicles/Truck_01.glb"
-dest_files=["res://.godot/imported/Truck_01.glb-1cadf8374c93d77f6c6faf5a3555d513.scn"]
+source_file="res://GLB/Glb/Barrel_01.glb"
+dest_files=["res://.godot/imported/Barrel_01.glb-85b98bbf08095d47b95ca3c14f94ed74.scn"]
 
 [params]
 

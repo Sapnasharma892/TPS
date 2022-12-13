@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b6ewfobdxrqln"
-path="res://.godot/imported/WaterTank_01.glb-f9b3d8a098c04db9e675bbe6a1c1fb1c.scn"
+uid="uid://bfmuhb42agcuu"
+path="res://.godot/imported/Table.glb-ab5308875821b08751c84f14466f4556.scn"
 
 [deps]
 
-source_file="res://GLB/GameAssets/Glb - Copy/Glb/WaterTank_01.glb"
-dest_files=["res://.godot/imported/WaterTank_01.glb-f9b3d8a098c04db9e675bbe6a1c1fb1c.scn"]
+source_file="res://GLB/Glb/Table.glb"
+dest_files=["res://.godot/imported/Table.glb-ab5308875821b08751c84f14466f4556.scn"]
 
 [params]
 
