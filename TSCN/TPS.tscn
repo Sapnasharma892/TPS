@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bo365smda1tio"]
+[gd_scene load_steps=23 format=3 uid="uid://bo365smda1tio"]
 
 [ext_resource type="Texture2D" uid="uid://brqy4xgqateky" path="res://Textures/Textures_DessertTerrain/Textures_DessertTerrain/Dessert_Color.png" id="1_0d3ep"]
 [ext_resource type="Texture2D" uid="uid://bkbvdco7tdxgy" path="res://Textures/Textures_DessertTerrain/Textures_DessertTerrain/Dessert_Height.png" id="1_dl1wv"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://rerbcp26ik7e" path="res://TSCN/SM_ShippingContainer.tscn" id="8_t4tvt"]
 [ext_resource type="MeshLibrary" uid="uid://cmwattimbyppx" path="res://Mesh/Road.meshlib" id="9_6brhg"]
 [ext_resource type="PackedScene" uid="uid://douv0jqkasqx2" path="res://TSCN/SM_Water_Tank_01.tscn" id="11_emadj"]
+[ext_resource type="PackedScene" uid="uid://bvfff8io1gamb" path="res://TSCN/SM_Oil_Tank.tscn" id="12_gm4kk"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lb54c"]
 render_priority = 0
@@ -157,7 +158,7 @@ mesh = SubResource("PlaneMesh_tph1s")
 [node name="SM_WatchTower" type="Node3D" parent="."]
 
 [node name="SM_WatchTower_01" parent="SM_WatchTower" instance=ExtResource("6_7gbll")]
-transform = Transform3D(0.670375, 0, 0.742023, 0, 1, 0, -0.742023, 0, 0.670375, -236.257, 5.67153, -2.7654)
+transform = Transform3D(0.670375, 0, 0.742023, 0, 1, 0, -0.742023, 0, 0.670375, -237.26, 5.67153, -4.05895)
 
 [node name="SM_WatchTower_02" parent="SM_WatchTower" instance=ExtResource("6_7gbll")]
 transform = Transform3D(0.124762, 0, 0.992187, 0, 1, 0, -0.992187, 0, 0.124762, -358.376, 5.67153, -5.11753)
@@ -221,7 +222,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -240.645, 5.62242, 51.8199)
 [node name="SM_WaterTank" type="Node3D" parent="."]
 
 [node name="SM_WaterTank_01" parent="SM_WaterTank" instance=ExtResource("11_emadj")]
-transform = Transform3D(0.319042, 0, -0.94774, 0, 1, 0, 0.94774, 0, 0.319042, -383.912, 5.10107, 187.295)
+transform = Transform3D(0.319042, 0, -0.94774, 0, 1, 0, 0.94774, 0, 0.319042, -378.933, 5.10107, 187.295)
 
 [node name="SM_WaterTank_02" parent="SM_WaterTank" instance=ExtResource("11_emadj")]
 transform = Transform3D(0.319042, 0, -0.94774, -0.0245609, 0.999664, -0.00826805, 0.947422, 0.0259152, 0.318935, -219.486, 7.96632, 188.292)
@@ -231,3 +232,11 @@ transform = Transform3D(0.319042, 0, -0.94774, 0, 1, 0, 0.94774, 0, 0.319042, -2
 
 [node name="SM_WaterTank_04" parent="SM_WaterTank" instance=ExtResource("11_emadj")]
 transform = Transform3D(0.0911019, 0, -0.995842, 0, 1, 0, 0.995842, 0, 0.0911019, -375.412, 5.10107, -24.509)
+
+[node name="SM_OIl_Tank" type="Node3D" parent="."]
+
+[node name="SM_Oil_Tank_01" parent="SM_OIl_Tank" instance=ExtResource("12_gm4kk")]
+transform = Transform3D(-0.999799, 0, 0.0200526, 0, 1, 0, -0.0200526, 0, -0.999799, -241.576, 5.47152, 99.4343)
+
+[node name="SM_Oil_Tank_02" parent="SM_OIl_Tank" instance=ExtResource("12_gm4kk")]
+transform = Transform3D(-0.999895, 0, -0.0144857, 0, 1, 0, 0.0144857, 0, -0.999895, -242.168, 5.47152, 119.171)
