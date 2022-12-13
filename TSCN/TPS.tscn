@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b0xgyx05flkf5"]
+[gd_scene load_steps=22 format=3 uid="uid://b0xgyx05flkf5"]
 
 [ext_resource type="Texture2D" uid="uid://brqy4xgqateky" path="res://Textures/Textures_DessertTerrain/Textures_DessertTerrain/Dessert_Color.png" id="1_0d3ep"]
 [ext_resource type="Texture2D" uid="uid://bkbvdco7tdxgy" path="res://Textures/Textures_DessertTerrain/Textures_DessertTerrain/Dessert_Height.png" id="1_dl1wv"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://douv0jqkasqx2" path="res://TSCN/SM_Water_Tank_01.tscn" id="11_emadj"]
 [ext_resource type="MeshLibrary" uid="uid://3vxeo0ine6fi" path="res://Mesh/Fence.meshlib" id="12_0wsit"]
 [ext_resource type="PackedScene" uid="uid://bvfff8io1gamb" path="res://TSCN/SM_Oil_Tank.tscn" id="12_gm4kk"]
+[ext_resource type="PackedScene" uid="uid://dwgu67q08jpd5" path="res://TSCN/SM_Tank.tscn" id="13_nhjgf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lb54c"]
 render_priority = 0
@@ -48,7 +49,7 @@ size = Vector3(150, 3, 2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.0357, 3.05176e-05, -7.39676)
 
 [node name="SM_Lower_Ground" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -110.501, -9.93088, 23.0679)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -132.009, -9.93088, 23.0679)
 material_override = SubResource("ShaderMaterial_lb54c")
 mesh = SubResource("PlaneMesh_btwxr")
 script = ExtResource("3_o86cm")
@@ -200,7 +201,19 @@ transform = Transform3D(0.0911019, 0, -0.995842, 0, 1, 0, 0.995842, 0, 0.0911019
 transform = Transform3D(-0.999799, 0, 0.0200526, 0, 1, 0, -0.0200526, 0, -0.999799, -241.576, 5.47152, 99.4343)
 
 [node name="SM_Oil_Tank_02" parent="SM_OIl_Tank" instance=ExtResource("12_gm4kk")]
-transform = Transform3D(-0.999895, 0, -0.0144857, 0, 1, 0, 0.0144857, 0, -0.999895, -242.168, 5.47152, 119.171)
+transform = Transform3D(-0.999895, 0, -0.0144857, 0, 1, 0, 0.0144857, 0, -0.999895, -242.168, 5.47152, 104.809)
+
+[node name="SM_Oil_Tank_03" parent="SM_OIl_Tank" instance=ExtResource("12_gm4kk")]
+transform = Transform3D(-0.999895, 0, -0.0144857, 0, 1, 0, 0.0144857, 0, -0.999895, -242.168, 5.47152, 110.326)
+
+[node name="SM_Oil_Tank_04" parent="SM_OIl_Tank" instance=ExtResource("12_gm4kk")]
+transform = Transform3D(-0.999895, 0, -0.0144857, 0, 1, 0, 0.0144857, 0, -0.999895, -251.296, 5.47152, 110.326)
+
+[node name="SM_Oil_Tank_05" parent="SM_OIl_Tank" instance=ExtResource("12_gm4kk")]
+transform = Transform3D(-0.999895, 0, -0.0144857, 0, 1, 0, 0.0144857, 0, -0.999895, -251.296, 5.47152, 104.726)
+
+[node name="SM_Oil_Tank_06" parent="SM_OIl_Tank" instance=ExtResource("12_gm4kk")]
+transform = Transform3D(-0.999895, 0, -0.0144857, 0, 1, 0, 0.0144857, 0, -0.999895, -251.296, 5.47152, 99.277)
 
 [node name="GridMap_Fence2" type="Node3D" parent="."]
 
@@ -227,3 +240,11 @@ data = {
 "cells": PackedInt32Array(262033, 65530, 1048576, 262033, 65531, 1048576, 262033, 65532, 1048576, 262033, 65533, 1048576, 262033, 65534, 1048576, 262033, 65535, 1048576, 262033, 0, 1048576, 262033, 1, 1048576, 262033, 2, 1048576, 262033, 3, 1048576, 262033, 4, 1048576, 262033, 5, 1048576, 262033, 6, 1048576, 262033, 7, 1048576, 262033, 8, 1048576, 262033, 9, 1048576, 262033, 10, 1048576, 262033, 11, 1048576, 262033, 12, 1048576, 262033, 13, 1048576, 262033, 14, 1048576, 262033, 15, 1048576, 262033, 16, 1048576, 262033, 17, 1048576, 262033, 18, 1048576, 262033, 19, 1048576, 262033, 20, 1048576, 262033, 21, 1048576, 262033, 22, 1048576, 262033, 23, 1048576, 262033, 24, 1048576, 262033, 25, 1048576, 262033, 26, 1048576, 262033, 27, 1048576, 262033, 28, 1048576, 262033, 29, 1048576, 262033, 30, 1048576, 262033, 31, 1048576, 262033, 32, 1048576, 262033, 33, 1048576, 262033, 34, 1048576, 262033, 35, 1048576, 262033, 36, 1048576, 262033, 37, 1048576, 262033, 38, 1048576, 262033, 39, 1048576, 262033, 40, 1048576, 262033, 41, 1048576, 262033, 42, 1048576, 262033, 43, 1048576, 262033, 44, 1048576, 262033, 45, 1048576, 262033, 46, 1048576, 262033, 47, 1048576, 262033, 48, 1048576, 262033, 49, 1048576, 262033, 50, 1048576, 262033, 51, 1048576, 262033, 52, 1048576, 262033, 53, 1048576, 262033, 54, 1048576)
 }
 metadata/_editor_floor_ = Vector3(0, 3, 0)
+
+[node name="SM_Vehicles" type="Node3D" parent="."]
+
+[node name="SM_Tank_01" parent="SM_Vehicles" instance=ExtResource("13_nhjgf")]
+transform = Transform3D(0.0249904, 0, 0.999688, 0, 1, 0, -0.999688, 0, 0.0249904, -240.445, 5.54341, 162.998)
+
+[node name="SM_Tank_02" parent="SM_Vehicles" instance=ExtResource("13_nhjgf")]
+transform = Transform3D(0.0249904, 0, 0.999688, 0, 1, 0, -0.999688, 0, 0.0249904, -241.046, 5.54341, 150.342)
