@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bm1bqkdnjwlqg"
-path="res://.godot/imported/BarbWireFence_v01.glb-94d23cbb0dc2275cfb47aa358a558faf.scn"
+uid="uid://brrf0vski3l6r"
+path="res://.godot/imported/SolidBox_v01.glb-3dc69585a878da2507ef3eae3d847c2d.scn"
 
 [deps]
 
-source_file="res://GLB/Glb/BarbWireFence_v01.glb"
-dest_files=["res://.godot/imported/BarbWireFence_v01.glb-94d23cbb0dc2275cfb47aa358a558faf.scn"]
+source_file="res://GLB/TPSGame_GLBAssets_01/SolidBox_v01.glb"
+dest_files=["res://.godot/imported/SolidBox_v01.glb-3dc69585a878da2507ef3eae3d847c2d.scn"]
 
 [params]
 
