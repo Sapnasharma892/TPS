@@ -12,7 +12,6 @@ config_version=5
 
 config/name="TPS"
 config/features=PackedStringArray("4.0", "Vulkan Clustered")
-config/icon="res://Textures/icon.svg"
 
 [display]
 

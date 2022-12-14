@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="ArrayMesh" path="res://TRES/OilTank/SM_OilTank.tres" id="1_ddoti"]
+[ext_resource type="ArrayMesh" uid="uid://ldqbtq8fg6ec" path="res://TRES/OilTank/SM_OilTank_01.tres" id="2_c6k5u"]
+
+[node name="Node3d" type="Node3D"]
+
+[node name="SM_Tank" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.10631, 0, 2.72205)
+mesh = ExtResource("1_ddoti")
+
+[node name="SM_Tank_01" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.10631, 0, -2.72205)
+mesh = ExtResource("2_c6k5u")
+skeleton = NodePath("../SM_Tank")

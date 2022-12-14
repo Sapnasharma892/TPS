@@ -1,30 +1,33 @@
-[gd_scene load_steps=27 format=3 uid="uid://b0xgyx05flkf5"]
+[gd_scene load_steps=23 format=3 uid="uid://ddmo1irskq62"]
 
-[ext_resource type="Texture2D" uid="uid://brqy4xgqateky" path="res://Textures/Textures_DessertTerrain/Textures_DessertTerrain/Dessert_Color.png" id="1_0d3ep"]
-[ext_resource type="Texture2D" uid="uid://bkbvdco7tdxgy" path="res://Textures/Textures_DessertTerrain/Textures_DessertTerrain/Dessert_Height.png" id="1_dl1wv"]
+[ext_resource type="MeshLibrary" uid="uid://c61qwi7d42x7m" path="res://Meshlib/BarbWireFence.meshlib" id="1_4q4y5"]
+[ext_resource type="Texture2D" uid="uid://ctbt411nor1re" path="res://Textures/DessetTerrain/Dessert_Color.png" id="1_mpk3j"]
+[ext_resource type="Texture2D" uid="uid://ctcnocq4exwwr" path="res://Textures/DessetTerrain/Dessert_Height.png" id="2_4o3pb"]
+[ext_resource type="MeshLibrary" uid="uid://0i2dggknrt08" path="res://Meshlib/SolidBox.meshlib" id="3_d784a"]
 [ext_resource type="Shader" path="res://Shader/Heightmap.gdshader" id="3_jymlw"]
-[ext_resource type="Script" path="res://SM_Ground.gd" id="3_o86cm"]
+[ext_resource type="Script" path="res://GDScript/SM_Ground.gd" id="3_o86cm"]
 [ext_resource type="PackedScene" path="res://TSCN/SM_Watch_Tower.tscn" id="6_7gbll"]
-[ext_resource type="PackedScene" path="res://TSCN/SM_Barrack_02.tscn" id="7_bpvpl"]
-[ext_resource type="PackedScene" path="res://TSCN/SM_Sandbag_Barrier.tscn" id="7_rljq0"]
+[ext_resource type="PackedScene" uid="uid://xruhxuqd1b00" path="res://TSCN/Barrack_02.tscn" id="7_bpvpl"]
+[ext_resource type="PackedScene" uid="uid://cta8ktibv4ero" path="res://TSCN/Sandbag_Barrier.tscn" id="7_rljq0"]
+[ext_resource type="MeshLibrary" uid="uid://0v5ws5a62dcb" path="res://Meshlib/Road.meshlib" id="8_7vsyy"]
 [ext_resource type="PackedScene" path="res://TSCN/SM_Tunnel_Tent.tscn" id="8_jht02"]
-[ext_resource type="PackedScene" path="res://TSCN/SM_ShippingContainer.tscn" id="8_t4tvt"]
-[ext_resource type="PackedScene" path="res://TSCN/SM_Water_Tank_01.tscn" id="11_emadj"]
-[ext_resource type="MeshLibrary" path="res://Mesh/Fence.meshlib" id="12_0wsit"]
-[ext_resource type="PackedScene" path="res://TSCN/SM_Oil_Tank.tscn" id="12_gm4kk"]
-[ext_resource type="PackedScene" path="res://TSCN/SM_Tank.tscn" id="13_nhjgf"]
-[ext_resource type="PackedScene" path="res://TSCN/SM_Tent_01.tscn" id="14_6qgcm"]
-[ext_resource type="PackedScene" path="res://TSCN/SM_Truck_02.tscn" id="14_mxtt0"]
-[ext_resource type="PackedScene" path="res://TSCN/SM_Barrel.tscn" id="15_rd03g"]
-[ext_resource type="PackedScene" path="res://TSCN/SM_ConcreteBarrier.tscn" id="16_3e31i"]
-[ext_resource type="PackedScene" path="res://TSCN/SM_Jeep_01.tscn" id="18_lonsh"]
+[ext_resource type="PackedScene" uid="uid://rerbcp26ik7e" path="res://TSCN/ShippingContainer.tscn" id="8_t4tvt"]
+[ext_resource type="MeshLibrary" uid="uid://d3aaqq61qhr2h" path="res://Meshlib/Fence.meshlib" id="12_0wsit"]
+[ext_resource type="PackedScene" uid="uid://c04f5tcbje40h" path="res://TSCN/SM_Truck_02.tscn" id="14_3wyvs"]
+[ext_resource type="PackedScene" uid="uid://bvfff8io1gamb" path="res://TSCN/OilTank.tscn" id="14_plngd"]
+[ext_resource type="PackedScene" uid="uid://dwgu67q08jpd5" path="res://TSCN/SM_Tank.tscn" id="15_r8f2d"]
+[ext_resource type="PackedScene" uid="uid://by41e7h5mc76n" path="res://TSCN/ConcreteBarrier.tscn" id="16_3e31i"]
+[ext_resource type="PackedScene" uid="uid://bc4x30ksxq2r8" path="res://TSCN/Jeep_01.tscn" id="16_w68w8"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tycs0"]
+size = Vector2(150, 200)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lb54c"]
 render_priority = 0
 shader = ExtResource("3_jymlw")
-_a = ExtResource("1_0d3ep")
-height_ratio = 700.0
-heightmap = ExtResource("1_dl1wv")
+_a = ExtResource("1_mpk3j")
+height_ratio = 500.0
+heightmap = ExtResource("2_4o3pb")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_btwxr"]
 size = Vector2(2000, 2000)
@@ -33,294 +36,330 @@ subdivide_depth = 50
 
 [sub_resource type="Environment" id="Environment_rewh7"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_tycs0"]
-size = Vector2(150, 200)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x071e"]
-albedo_color = Color(1, 0.203922, 1, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_ps3lr"]
-material = SubResource("StandardMaterial3D_x071e")
-size = Vector3(200, 0.5, 2)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ioy6"]
-albedo_color = Color(0.501961, 1, 1, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_smbp1"]
-material = SubResource("StandardMaterial3D_5ioy6")
-size = Vector3(150, 3, 2)
-
 [node name="Node3d" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.0357, 3.05176e-05, -7.39676)
+transform = Transform3D(1.00178, 0, 0, 0, 1.00178, 0, 0, 0, 1.00178, -36.0083, 9.76556, -2.42238)
 
-[node name="SM_Lower_Ground" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -132.009, -9.93088, 23.0679)
+[node name="SM_Upper_Ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.634, 20.3868, 5.88611)
+mesh = SubResource("PlaneMesh_tycs0")
+
+[node name="SM_LowerGround" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -144.633, -9.93088, 23.0679)
 material_override = SubResource("ShaderMaterial_lb54c")
 mesh = SubResource("PlaneMesh_btwxr")
 script = ExtResource("3_o86cm")
 
-[node name="StaticBody3d" type="StaticBody3D" parent="SM_Lower_Ground"]
+[node name="StaticBody3d" type="StaticBody3D" parent="SM_LowerGround"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.124954, 3.8147e-06, 0.0127106)
 
-[node name="CollisionShape3d" type="CollisionShape3D" parent="SM_Lower_Ground/StaticBody3d"]
+[node name="CollisionShape3d" type="CollisionShape3D" parent="SM_LowerGround/StaticBody3d"]
 
 [node name="Camera3d" type="Camera3D" parent="."]
-transform = Transform3D(0.00296707, 0, -0.999996, 0, 1, 0, 0.999996, 0, 0.00296707, -0.307208, 0, 0.247091)
+transform = Transform3D(0.0029618, 0, -0.998219, 0, 0.998223, 0, 0.998219, 0, 0.0029618, -0.307205, 0, 0.247093)
 fov = 76.3846
 
 [node name="DirectionalLight3d" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.962529, 0.161346, 0.217959, -0.223322, 0.0156617, 0.974619, 0.153838, -0.986774, 0.0511071, 11.602, 414.111, 0)
+transform = Transform3D(0.235949, 0.96159, 0.126973, -0.258519, -0.0636019, 0.962067, 0.934851, -0.260286, 0.233998, -1.64909, 129.395, 2.3383)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_rewh7")
 
-[node name="SM_Border" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0869746, 0, 83.1586)
-
-[node name="SM_Upper_Ground" type="MeshInstance3D" parent="SM_Border"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -297.435, 5.44226, -1.66836)
-mesh = SubResource("PlaneMesh_tycs0")
-skeleton = NodePath("../..")
-
-[node name="SM_Fence3" type="MeshInstance3D" parent="SM_Border"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -304.924, 7.16832, -1.88608)
-mesh = SubResource("BoxMesh_ps3lr")
-skeleton = NodePath("../..")
-
-[node name="SM_Fence5" type="MeshInstance3D" parent="SM_Border"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -360.583, 6.98212, -1.88608)
-mesh = SubResource("BoxMesh_ps3lr")
-skeleton = NodePath("../..")
-
-[node name="SM_Fence4" type="MeshInstance3D" parent="SM_Border"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -289.011, 7.16832, -1.88608)
-mesh = SubResource("BoxMesh_ps3lr")
-skeleton = NodePath("../..")
-
-[node name="SM_Fence6" type="MeshInstance3D" parent="SM_Border"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -233.044, 7.16832, -1.88608)
-mesh = SubResource("BoxMesh_ps3lr")
-skeleton = NodePath("../..")
-
-[node name="SM_Fence_03" type="MeshInstance3D" parent="SM_Border"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -297.901, 7.04995, -10.9912)
-mesh = SubResource("BoxMesh_smbp1")
-skeleton = NodePath("../..")
-
-[node name="SM_Fence_05" type="MeshInstance3D" parent="SM_Border"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -297.901, 7.04995, -90.0477)
-mesh = SubResource("BoxMesh_smbp1")
-skeleton = NodePath("../..")
-
-[node name="SM_Fence_04" type="MeshInstance3D" parent="SM_Border"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -298.203, 6.8689, 8.6713)
-mesh = SubResource("BoxMesh_smbp1")
-skeleton = NodePath("../..")
-
-[node name="SM_Fence_06" type="MeshInstance3D" parent="SM_Border"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -289.103, 5.3819, 88.7413)
-mesh = SubResource("BoxMesh_smbp1")
-skeleton = NodePath("../..")
-
-[node name="SM_WatchTower" type="Node3D" parent="."]
-
-[node name="SM_WatchTower_01" parent="SM_WatchTower" instance=ExtResource("6_7gbll")]
-transform = Transform3D(0.670375, 0, 0.742023, 0, 1, 0, -0.742023, 0, 0.670375, -237.26, 5.67153, -4.05895)
-
-[node name="SM_WatchTower_02" parent="SM_WatchTower" instance=ExtResource("6_7gbll")]
-transform = Transform3D(0.124762, 0, 0.992187, 0, 1, 0, -0.992187, 0, 0.124762, -358.376, 5.67153, -3.98822)
-
-[node name="SM_WatchTower_03" parent="SM_WatchTower" instance=ExtResource("6_7gbll")]
-transform = Transform3D(-0.747636, 0, -0.664109, 0, 1, 0, 0.664109, 0, -0.747636, -355.577, 5.67153, 168.232)
-
-[node name="SM_WatchTower_04" parent="SM_WatchTower" instance=ExtResource("6_7gbll")]
-transform = Transform3D(0.847761, 0, -0.530378, 0, 1, 0, 0.530378, 0, 0.847761, -236.698, 5.67153, 168.232)
-
-[node name="SM_Barrack2" type="Node3D" parent="."]
-
-[node name="SM_Barrack" parent="SM_Barrack2" instance=ExtResource("7_bpvpl")]
-transform = Transform3D(0.00404917, 0, -0.999992, 0, 1, 0, 0.999992, 0, 0.00404917, -260.2, 5.56195, 9.92373)
-
-[node name="SM_Barrack2" parent="SM_Barrack2" instance=ExtResource("7_bpvpl")]
-transform = Transform3D(0.00404917, 0, -0.999992, 0, 1, 0, 0.999992, 0, 0.00404917, -260.2, 5.56195, 31.8467)
-
-[node name="SM_Barrack3" parent="SM_Barrack2" instance=ExtResource("7_bpvpl")]
-transform = Transform3D(0.00404917, 0, -0.999992, 0, 1, 0, 0.999992, 0, 0.00404917, -260.2, 5.56195, 54.2053)
-
-[node name="SM_Tunnel_Tent" type="Node3D" parent="."]
-
-[node name="SM_Tunnel_Tent_01" parent="SM_Tunnel_Tent" instance=ExtResource("8_jht02")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -344.639, 5.40767, 11.1801)
-
-[node name="SM_Tunnel_Tent_02" parent="SM_Tunnel_Tent" instance=ExtResource("8_jht02")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -319.856, 5.35686, 11.1801)
-
-[node name="SM_Tunnel_Tent_03" parent="SM_Tunnel_Tent" instance=ExtResource("8_jht02")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -319.856, 5.40767, 47.95)
-
-[node name="SM_Tunnel_Tent_04" parent="SM_Tunnel_Tent" instance=ExtResource("8_jht02")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -343.494, 5.40767, 47.95)
-
-[node name="SM_Shipping_Container" type="Node3D" parent="."]
-
-[node name="SM_Shipping_Container_01" parent="SM_Shipping_Container" instance=ExtResource("8_t4tvt")]
-transform = Transform3D(0.999203, 0, 0.0399225, 0, 1, 0, -0.0399225, 0, 0.999203, -366.424, 5.5329, 7.1339)
-
-[node name="SM_Shipping_Container_02" parent="SM_Shipping_Container" instance=ExtResource("8_t4tvt")]
-transform = Transform3D(0.718369, 0, 0.695662, 0, 1, 0, -0.695662, 0, 0.718369, -366.88, 5.66194, 16.9026)
-
-[node name="SM_Shipping_Container_03" parent="SM_Shipping_Container" instance=ExtResource("8_t4tvt")]
-transform = Transform3D(0.746116, 0, 0.665817, 0, 1, 0, -0.665817, 0, 0.746116, -367.354, 5.5329, 25.6589)
-
-[node name="SM_SandBag_Barrier" type="Node3D" parent="."]
-
-[node name="SM_Sandbag_Barrier_01" parent="SM_SandBag_Barrier" instance=ExtResource("7_rljq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -242.105, 5.35687, 20.5182)
-
-[node name="SM_Sandbag_Barrier_03" parent="SM_SandBag_Barrier" instance=ExtResource("7_rljq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -243.066, 5.35687, 24.7684)
-
-[node name="SM_Sandbag_Barrier_04" parent="SM_SandBag_Barrier" instance=ExtResource("7_rljq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -243.066, 5.35687, 15.0477)
-
-[node name="SM_Sandbag_Barrier_02" parent="SM_SandBag_Barrier" instance=ExtResource("7_rljq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -242.105, 5.62242, 46.9195)
-
-[node name="SM_Sandbag_Barrier_05" parent="SM_SandBag_Barrier" instance=ExtResource("7_rljq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -240.645, 5.62242, 40.2064)
-
-[node name="SM_Sandbag_Barrier_06" parent="SM_SandBag_Barrier" instance=ExtResource("7_rljq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -240.645, 5.62242, 51.8199)
-
-[node name="SM_WaterTank" type="Node3D" parent="."]
-
-[node name="SM_WaterTank_01" parent="SM_WaterTank" instance=ExtResource("11_emadj")]
-transform = Transform3D(0.319042, 0, -0.94774, 0, 1, 0, 0.94774, 0, 0.319042, -378.933, 5.10107, 187.295)
-
-[node name="SM_WaterTank_02" parent="SM_WaterTank" instance=ExtResource("11_emadj")]
-transform = Transform3D(0.319042, 0, -0.94774, -0.0245609, 0.999664, -0.00826805, 0.947422, 0.0259152, 0.318935, -219.486, 7.96632, 188.292)
-
-[node name="SM_WaterTank_03" parent="SM_WaterTank" instance=ExtResource("11_emadj")]
-transform = Transform3D(0.319042, 0, -0.94774, 0, 1, 0, 0.94774, 0, 0.319042, -218.989, 5.10107, -37.3301)
-
-[node name="SM_WaterTank_04" parent="SM_WaterTank" instance=ExtResource("11_emadj")]
-transform = Transform3D(0.0911019, 0, -0.995842, 0, 1, 0, 0.995842, 0, 0.0911019, -375.412, 5.10107, -67.9215)
-
-[node name="SM_OIl_Tank" type="Node3D" parent="."]
-
-[node name="SM_Oil_Tank_01" parent="SM_OIl_Tank" instance=ExtResource("12_gm4kk")]
-transform = Transform3D(-0.999799, 0, 0.0200526, 0, 1, 0, -0.0200526, 0, -0.999799, -242.094, 5.47152, 99.4343)
-
-[node name="SM_Oil_Tank_02" parent="SM_OIl_Tank" instance=ExtResource("12_gm4kk")]
-transform = Transform3D(-0.999895, 0, -0.0144857, 0, 1, 0, 0.0144857, 0, -0.999895, -242.168, 5.47152, 110.326)
-
-[node name="SM_Oil_Tank_03" parent="SM_OIl_Tank" instance=ExtResource("12_gm4kk")]
-transform = Transform3D(-0.999895, 0, -0.0144857, 0, 1, 0, 0.0144857, 0, -0.999895, -251.296, 5.47152, 110.326)
-
-[node name="SM_Oil_Tank_05" parent="SM_OIl_Tank" instance=ExtResource("12_gm4kk")]
-transform = Transform3D(-0.999895, 0, -0.0144857, 0, 1, 0, 0.0144857, 0, -0.999895, -251.296, 5.47152, 99.277)
-
-[node name="SM_Vehicles" type="Node3D" parent="."]
-
-[node name="SM_Tank_01" parent="SM_Vehicles" instance=ExtResource("13_nhjgf")]
-transform = Transform3D(0.0249904, 0, 0.999688, 0, 1, 0, -0.999688, 0, 0.0249904, -240.445, 5.54341, 162.998)
-
-[node name="SM_Tank_02" parent="SM_Vehicles" instance=ExtResource("13_nhjgf")]
-transform = Transform3D(0.0249904, 0, 0.999688, 0, 1, 0, -0.999688, 0, 0.0249904, -241.046, 5.54341, 150.342)
-
-[node name="SM_Tank_03" parent="SM_Vehicles" instance=ExtResource("13_nhjgf")]
-transform = Transform3D(0.562415, 0, 0.826855, 0, 1, 0, -0.826855, 0, 0.562415, -338.575, 5.54341, 63.3837)
-
-[node name="SM_Tank_04" parent="SM_Vehicles" instance=ExtResource("13_nhjgf")]
-transform = Transform3D(0.562415, 0, 0.826855, 0, 1, 0, -0.826855, 0, 0.562415, -316.726, 5.54341, 29.2638)
-
-[node name="SM_Truck_01" parent="SM_Vehicles" instance=ExtResource("14_mxtt0")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -241.091, 5.44076, 156.469)
-
-[node name="SM_Truck_02" parent="SM_Vehicles" instance=ExtResource("14_mxtt0")]
-transform = Transform3D(-0.999346, 0, -0.0361729, 0, 1, 0, 0.0361729, 0, -0.999346, -334.986, 5.44076, 19.9606)
-
-[node name="SM_Tent" type="Node3D" parent="."]
-
-[node name="SM_Tent_01" parent="SM_Tent" instance=ExtResource("14_6qgcm")]
-transform = Transform3D(-0.0596897, 0, -0.998217, 0, 1, 0, 0.998217, 0, -0.0596897, -247.04, 6.82355, 136.531)
-
-[node name="SM_Tent_02" parent="SM_Tent" instance=ExtResource("14_6qgcm")]
-transform = Transform3D(-0.0596897, 0, -0.998217, 0, 1, 0, 0.998217, 0, -0.0596897, -247.409, 6.82355, 122.703)
-
-[node name="SM_Barrel" type="Node3D" parent="."]
-
-[node name="SM_Barrel_01" parent="SM_Barrel" instance=ExtResource("15_rd03g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -295.33, 5.49399, 80.9703)
-
-[node name="SM_Barrel_02" parent="SM_Barrel" instance=ExtResource("15_rd03g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -295.33, 5.49399, 152.461)
-
-[node name="SM_Barrel_03" parent="SM_Barrel" instance=ExtResource("15_rd03g")]
-transform = Transform3D(0.652389, 0, -0.757884, 0, 1, 0, 0.757884, 0, 0.652389, -301.63, 5.41938, 16.9139)
-
-[node name="SM_Barrel_04" parent="SM_Barrel" instance=ExtResource("15_rd03g")]
-transform = Transform3D(-0.999779, 0, 0.0209948, 0, 1, 0, -0.0209948, 0, -0.999779, -300.109, 5.75515, -10.026)
-
-[node name="SM_Barrel_05" parent="SM_Barrel" instance=ExtResource("15_rd03g")]
-transform = Transform3D(0.0394866, 0, -0.99922, 0, 1, 0, 0.99922, 0, 0.0394866, -362.982, 5.45016, 4.07574)
-
-[node name="SM_ConcreteBarrier" type="Node3D" parent="."]
-
-[node name="SM_ConcreteBarrier_01" parent="SM_ConcreteBarrier" instance=ExtResource("16_3e31i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -305.24, 5.47934, 14.7138)
-
-[node name="SM_ConcreteBarrier_02" parent="SM_ConcreteBarrier" instance=ExtResource("16_3e31i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -303.92, 5.47934, 14.7138)
-
-[node name="SM_ConcreteBarrier_03" parent="SM_ConcreteBarrier" instance=ExtResource("16_3e31i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -302.549, 5.47934, 14.7138)
-
-[node name="SM_ConcreteBarrier_04" parent="SM_ConcreteBarrier" instance=ExtResource("16_3e31i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -301.202, 5.47934, 14.7138)
-
-[node name="SM_ConcreteBarrier_05" parent="SM_ConcreteBarrier" instance=ExtResource("16_3e31i")]
-transform = Transform3D(-0.128899, 0, -0.991658, 0, 1, 0, 0.991658, 0, -0.128899, -299.911, 5.47934, 14.7138)
-
-[node name="SM_Jeep" type="Node3D" parent="."]
-transform = Transform3D(-0.99665, 0, -0.0817819, 0, 1, 0, 0.0817819, 0, -0.99665, -294.374, 5.41658, 148.566)
-
-[node name="SM_Jeep_01" parent="SM_Jeep" instance=ExtResource("18_lonsh")]
-
-[node name="SM_Jeep_02" parent="SM_Jeep" instance=ExtResource("18_lonsh")]
-transform = Transform3D(-0.982127, 0, 0.188221, 0, 1, 0, -0.188221, 0, -0.982127, -8.8385, 0, 84.3919)
-
-[node name="GridMap_Fence" type="Node3D" parent="."]
-
-[node name="GridMap_Fence1" type="Node3D" parent="GridMap_Fence"]
-
-[node name="GridMap_Fence_01" type="GridMap" parent="GridMap_Fence/GridMap_Fence1"]
+[node name="BarbWireFence" type="Node3D" parent="."]
+
+[node name="GridMapBarbWireFence_01" type="GridMap" parent="BarbWireFence"]
+mesh_library = ExtResource("1_4q4y5")
+cell_size = Vector3(2.115, 1.508, 3.045)
+data = {
+"cells": PackedInt32Array(917484, 28, 1441792, 917484, 33, 1441792, 917484, 32, 1441792, 917484, 31, 1441792, 917484, 30, 1441792, 917484, 29, 1441792, 917484, 27, 1441792, 917484, 26, 1441792, 917484, 25, 1441792, 917484, 24, 1441792, 917484, 23, 1441792, 917484, 22, 1441792, 917484, 21, 1441792, 917484, 20, 1441792, 917484, 19, 1441792, 917484, 18, 1441792, 917484, 17, 1441792, 917484, 16, 1441792, 917484, 15, 1441792, 917484, 14, 1441792, 917484, 13, 1441792, 917484, 12, 1441792, 917484, 11, 1441792, 917484, 10, 1441792, 917484, 9, 1441792, 917484, 8, 1441792, 917484, 7, 1441792, 917484, 6, 1441792, 917484, 5, 1441792, 917484, 65535, 1441792, 917484, 65534, 1441792, 917484, 65533, 1441792, 917484, 65532, 1441792, 917484, 65531, 1441792, 917484, 65530, 1441792, 917484, 65529, 1441792, 917484, 65528, 1441792, 917484, 65527, 1441792, 917484, 65526, 1441792, 917484, 65525, 1441792, 917484, 65524, 1441792, 917484, 65523, 1441792, 917484, 65522, 1441792, 917484, 65521, 1441792, 917484, 65520, 1441792, 917484, 65519, 1441792, 917484, 65518, 1441792, 917484, 65517, 1441792, 917484, 65516, 1441792, 917484, 65515, 1441792, 917484, 65514, 1441792, 917484, 65513, 1441792, 917484, 65512, 1441792, 917484, 65511, 1441792, 917484, 65510, 1441792, 917484, 65509, 1441792, 917484, 65508, 1441792, 917484, 65507, 1441792, 917484, 65506, 1441792)
+}
+metadata/_editor_floor_ = Vector3(0, 13, 0)
+
+[node name="GridMapBarbWireFence_02" type="GridMap" parent="BarbWireFence"]
+mesh_library = ExtResource("1_4q4y5")
+cell_size = Vector3(2.694, 1.94, 1.977)
+data = {
+"cells": PackedInt32Array(720881, 53, 0, 720882, 53, 0, 720883, 53, 0, 720884, 53, 0, 720885, 53, 0, 720886, 53, 0, 720887, 53, 0, 720888, 53, 0, 720889, 53, 0, 720890, 53, 0, 720892, 53, 0, 720893, 53, 0, 720894, 53, 0, 720895, 53, 0, 655360, 53, 0, 655361, 53, 0, 655362, 53, 0, 655363, 53, 0, 655364, 53, 0, 655365, 53, 0, 655366, 53, 0, 655367, 53, 0, 655368, 53, 0, 655369, 53, 0, 655375, 53, 0, 655376, 53, 0, 655377, 53, 0, 655378, 53, 0, 655379, 53, 0, 655380, 53, 0, 655381, 53, 0, 655382, 53, 0, 655383, 53, 0, 655384, 53, 0, 655385, 53, 0, 655386, 53, 0, 655387, 53, 0, 655388, 53, 0, 655389, 53, 0, 655390, 53, 0, 655391, 53, 0, 655392, 53, 0, 655393, 53, 0, 655394, 53, 0, 655395, 53, 0, 655396, 53, 0, 655397, 53, 0, 655398, 53, 0, 655399, 53, 0, 655398, 65488, 655360, 655397, 65488, 655360, 655396, 65488, 655360, 655395, 65488, 655360, 655394, 65488, 655360, 655393, 65488, 655360, 655392, 65488, 655360, 655391, 65488, 655360, 655389, 65488, 655360, 655399, 65488, 655360, 655387, 65488, 655360, 655386, 65488, 655360, 655385, 65488, 655360, 655384, 65488, 655360, 655383, 65488, 655360, 655382, 65488, 655360, 655381, 65488, 655360, 655380, 65488, 655360, 655379, 65488, 655360, 655378, 65488, 655360, 655377, 65488, 655360, 655376, 65488, 655360, 655375, 65488, 655360, 655369, 65488, 655360, 655368, 65488, 655360, 655367, 65488, 655360, 655366, 65488, 655360, 655365, 65488, 655360, 655364, 65488, 655360, 655363, 65488, 655360, 655362, 65488, 655360, 655360, 65488, 655360, 655361, 65488, 655360, 720895, 65488, 655360, 720894, 65488, 655360, 720893, 65488, 655360, 720892, 65488, 655360, 720891, 65488, 655360, 720890, 65488, 655360, 720889, 65488, 655360, 720888, 65488, 655360, 720887, 65488, 655360, 720886, 65488, 655360, 720885, 65488, 655360, 720884, 65488, 655360, 720883, 65488, 655360, 720882, 65488, 655360, 720881, 65488, 655360)
+}
+metadata/_editor_floor_ = Vector3(0, 10, 0)
+
+[node name="GridMapBarbWireFence_03" type="GridMap" parent="BarbWireFence"]
+mesh_library = ExtResource("1_4q4y5")
+cell_size = Vector3(1.992, 1.942, 2.667)
+data = {
+"cells": PackedInt32Array(655414, 65502, 1048576, 655414, 65503, 1048576, 655414, 65504, 1048576, 655414, 65505, 1048576, 655414, 65506, 1048576, 655414, 65507, 1048576, 655414, 65508, 1048576, 655414, 65509, 1048576, 655414, 65510, 1048576, 655414, 65511, 1048576, 655414, 65512, 1048576, 655414, 65513, 1048576, 655414, 65514, 1048576, 655414, 65515, 1048576, 655414, 65516, 1048576, 655414, 65517, 1048576, 655414, 65518, 1048576, 655414, 65519, 1048576, 655414, 65520, 1048576, 655414, 65521, 1048576, 655414, 65522, 1048576, 655414, 65523, 1048576, 655414, 65524, 1048576, 655414, 65525, 1048576, 655414, 65526, 1048576, 655414, 65527, 1048576, 655414, 65528, 1048576, 655414, 65529, 1048576, 655414, 65530, 1048576, 655414, 65531, 1048576, 655414, 65532, 1048576, 655414, 65533, 1048576, 655414, 65534, 1048576, 655414, 5, 1048576, 655414, 6, 1048576, 655414, 7, 1048576, 655414, 8, 1048576, 655414, 9, 1048576, 655414, 10, 1048576, 655414, 11, 1048576, 655414, 12, 1048576, 655414, 13, 1048576, 655414, 14, 1048576, 655414, 15, 1048576, 655414, 16, 1048576, 655414, 17, 1048576, 655414, 18, 1048576, 655414, 19, 1048576, 655414, 20, 1048576, 655414, 21, 1048576, 655414, 22, 1048576, 655414, 23, 1048576, 655414, 24, 1048576, 655414, 25, 1048576, 655414, 26, 1048576, 655414, 27, 1048576, 655414, 28, 1048576, 655414, 29, 1048576, 655414, 30, 1048576, 655414, 31, 1048576, 655414, 32, 1048576, 655414, 33, 1048576, 655414, 34, 1048576, 655414, 35, 1048576, 655414, 36, 1048576, 655414, 37, 1048576, 655414, 38, 1048576)
+}
+metadata/_editor_floor_ = Vector3(0, 10, 0)
+
+[node name="Fence" type="Node3D" parent="."]
+
+[node name="GridMapFence_01" type="GridMap" parent="Fence"]
 mesh_library = ExtResource("12_0wsit")
-cell_size = Vector3(3.264, 1.558, 1.77)
+cell_size = Vector3(3.082, 1.938, 2.036)
 data = {
-"cells": PackedInt32Array(262075, 102, 0, 262074, 102, 0, 262073, 102, 0, 262072, 102, 0, 262071, 102, 0, 262070, 102, 0, 262069, 102, 0, 262068, 102, 0, 262067, 102, 0, 262066, 102, 0, 262065, 102, 0, 262064, 102, 0, 262063, 102, 0, 262062, 102, 0, 262061, 102, 0, 262060, 102, 0, 262059, 102, 0, 262058, 102, 0, 262057, 102, 0, 262056, 102, 0, 262055, 102, 0, 262054, 102, 0, 262053, 102, 0, 262052, 102, 0, 262051, 102, 0, 262050, 102, 0, 262049, 102, 0, 262048, 102, 0, 262047, 102, 0, 262046, 102, 0, 262045, 102, 0, 262044, 102, 0, 262043, 102, 0, 262042, 102, 0, 262041, 102, 0, 262040, 102, 0, 262039, 102, 0, 262038, 102, 0, 262037, 102, 0, 262036, 102, 0, 262035, 102, 0, 262034, 102, 0, 262033, 102, 0, 262032, 102, 0, 262031, 102, 0, 262030, 102, 0, 262031, 65525, 655360, 262032, 65525, 655360, 262033, 65525, 655360, 262034, 65525, 655360, 262035, 65525, 655360, 262036, 65525, 655360, 262030, 65525, 655360, 262037, 65525, 655360, 262038, 65525, 655360, 262039, 65525, 655360, 262040, 65525, 655360, 262041, 65525, 655360, 262042, 65525, 655360, 262043, 65525, 655360, 262044, 65525, 655360, 262045, 65525, 655360, 262046, 65525, 655360, 262047, 65525, 655360, 262048, 65525, 655360, 262049, 65525, 655360, 262050, 65525, 655360, 262051, 65525, 655360, 262052, 65525, 655360, 262053, 65525, 655360, 262054, 65525, 655360, 262055, 65525, 655360, 262056, 65525, 655360, 262057, 65525, 655360, 262058, 65525, 655360, 262059, 65525, 655360, 262060, 65525, 655360, 262061, 65525, 655360, 262062, 65525, 655360, 262063, 65525, 655360, 262064, 65525, 655360, 262065, 65525, 655360, 262066, 65525, 655360, 262067, 65525, 655360, 262068, 65525, 655360, 262069, 65525, 655360, 262070, 65525, 655360, 262071, 65525, 655360, 262072, 65525, 655360, 262073, 65525, 655360, 262074, 65525, 655360, 262075, 65525, 655360)
+"cells": PackedInt32Array(720885, 65492, 655360, 720887, 65492, 655360, 720889, 65492, 655360, 720891, 65492, 655360, 720893, 65492, 655360, 720894, 65492, 655360, 720895, 65492, 655360, 720892, 65492, 655360, 720890, 65492, 655360, 720888, 65492, 655360, 720886, 65492, 655360, 655360, 65492, 655360, 655361, 65492, 655360, 655362, 65492, 655360, 655363, 65492, 655360, 655364, 65492, 655360, 655365, 65492, 655360, 655366, 65492, 655360, 655367, 65492, 655360, 655368, 65492, 655360, 655373, 65492, 655360, 655374, 65492, 655360, 655375, 65492, 655360, 655376, 65492, 655360, 655377, 65492, 655360, 655378, 65492, 655360, 655379, 65492, 655360, 655380, 65492, 655360, 655382, 65492, 655360, 655383, 65492, 655360, 655384, 65492, 655360, 655385, 65492, 655360, 655386, 65492, 655360, 655387, 65492, 655360, 655388, 65492, 655360, 655389, 65492, 655360, 655390, 65492, 655360, 655381, 65492, 655360, 655391, 65492, 655360, 655392, 65492, 655360, 720884, 65492, 655360, 655393, 49, 0, 655392, 49, 0, 655391, 49, 0, 655390, 49, 0, 655389, 49, 0, 655388, 49, 0, 655387, 49, 0, 655386, 49, 0, 655385, 49, 0, 655384, 49, 0, 655383, 49, 0, 655382, 49, 0, 655381, 49, 0, 655380, 49, 0, 655379, 49, 0, 655378, 49, 0, 655377, 49, 0, 655376, 49, 0, 655375, 49, 0, 655374, 49, 0, 655373, 49, 0, 655368, 49, 0, 655367, 49, 0, 655366, 49, 0, 655365, 49, 0, 655364, 49, 0, 655363, 49, 0, 655362, 49, 0, 655361, 49, 0, 655360, 49, 0, 720895, 49, 0, 720894, 49, 0, 720893, 49, 0, 720892, 49, 0, 720891, 49, 0, 720890, 49, 0, 720889, 49, 0, 720888, 49, 0, 720887, 49, 0, 720886, 49, 0, 720885, 49, 0, 720884, 49, 0)
 }
-metadata/_editor_floor_ = Vector3(0, 3, 0)
+metadata/_editor_floor_ = Vector3(0, 10, 0)
 
-[node name="GridMap_Fence_02" type="GridMap" parent="GridMap_Fence/GridMap_Fence1"]
+[node name="GridMapFence_02" type="GridMap" parent="Fence"]
 mesh_library = ExtResource("12_0wsit")
-cell_size = Vector3(1.985, 1.551, 3.297)
+cell_size = Vector3(2.056, 1.946, 3.234)
 data = {
-"cells": PackedInt32Array(261956, 54, 1441792, 261956, 53, 1441792, 261956, 52, 1441792, 261956, 51, 1441792, 261956, 50, 1441792, 261956, 49, 1441792, 261956, 48, 1441792, 261956, 47, 1441792, 261956, 46, 1441792, 261956, 45, 1441792, 261956, 44, 1441792, 261956, 43, 1441792, 261956, 42, 1441792, 261956, 41, 1441792, 261956, 40, 1441792, 261956, 39, 1441792, 261956, 38, 1441792, 261956, 37, 1441792, 261956, 36, 1441792, 261956, 35, 1441792, 261956, 34, 1441792, 261956, 33, 1441792, 261956, 32, 1441792, 261956, 31, 1441792, 261956, 30, 1441792, 261956, 29, 1441792, 261956, 28, 1441792, 261956, 27, 1441792, 261956, 26, 1441792, 261956, 25, 1441792, 261956, 24, 1441792, 261956, 23, 1441792, 261956, 22, 1441792, 261956, 21, 1441792, 261956, 20, 1441792, 261956, 19, 1441792, 261956, 18, 1441792, 261956, 17, 1441792, 261956, 16, 1441792, 261956, 15, 1441792, 261956, 14, 1441792, 261956, 13, 1441792, 261956, 12, 1441792, 261956, 11, 1441792, 261956, 10, 1441792, 261956, 9, 1441792, 261956, 8, 1441792, 261956, 7, 1441792, 261956, 6, 1441792, 261956, 5, 1441792, 261956, 4, 1441792, 261956, 3, 1441792, 261956, 2, 1441792, 261956, 1, 1441792, 261956, 0, 1441792, 261956, 65535, 1441792, 261956, 65534, 1441792, 261956, 65533, 1441792, 261956, 65532, 1441792, 261956, 65531, 1441792, 261956, 65530, 1048576)
+"cells": PackedInt32Array(655410, 65509, 1048576, 655410, 65510, 1048576, 655410, 65511, 1048576, 655410, 65512, 1048576, 655410, 65513, 1048576, 655410, 65508, 1048576, 655410, 65514, 1048576, 655410, 65515, 1048576, 655410, 65516, 1048576, 655410, 65517, 1048576, 655410, 65518, 1048576, 655410, 65519, 1048576, 655410, 65520, 1048576, 655410, 65521, 1048576, 655410, 65522, 1048576, 655410, 65523, 1048576, 655410, 65524, 1048576, 655410, 65525, 1048576, 655410, 65526, 1048576, 655410, 65527, 1048576, 655410, 65528, 1048576, 655410, 65529, 1048576, 655410, 65530, 1048576, 655410, 65531, 1048576, 655410, 65532, 1048576, 655410, 65533, 1048576, 655410, 65534, 1048576, 655410, 65535, 1048576, 655410, 4, 1048576, 655410, 5, 1048576, 655410, 6, 1048576, 655410, 7, 1048576, 655410, 8, 1048576, 655410, 9, 1048576, 655410, 10, 1048576, 655410, 11, 1048576, 655410, 12, 1048576, 655410, 13, 1048576, 655410, 14, 1048576, 655410, 15, 1048576, 655410, 16, 1048576, 655410, 17, 1048576, 655410, 18, 1048576, 655410, 19, 1048576, 655410, 20, 1048576, 655410, 21, 1048576, 655410, 22, 1048576, 655410, 23, 1048576, 655410, 24, 1048576, 655410, 26, 1048576, 655410, 27, 1048576, 655410, 28, 1048576, 655410, 29, 1048576, 655410, 30, 1048576, 655410, 31, 1048576, 720878, 31, 1441792, 720878, 30, 1441792, 720878, 29, 1441792, 720878, 28, 1441792, 720878, 26, 1441792, 720878, 27, 1441792, 720878, 25, 1441792, 720878, 24, 1441792, 720878, 23, 1441792, 720878, 22, 1441792, 720878, 21, 1441792, 720878, 20, 1441792, 720878, 19, 1441792, 720878, 18, 1441792, 720878, 17, 1441792, 720878, 16, 1441792, 720878, 15, 1441792, 720878, 14, 1441792, 720878, 13, 1441792, 720878, 12, 1441792, 720878, 11, 1441792, 720878, 10, 1441792, 720878, 9, 1441792, 720878, 8, 1441792, 720878, 7, 1441792, 720878, 6, 1441792, 720878, 5, 1441792, 720878, 4, 1441792, 720878, 65535, 1441792, 720878, 65534, 1441792, 720878, 65533, 1441792, 720878, 65532, 1441792, 720878, 65531, 1441792, 720878, 65530, 1441792, 720878, 65529, 1441792, 720878, 65528, 1441792, 720878, 65527, 1441792, 720878, 65526, 1441792, 720878, 65525, 1441792, 720878, 65524, 1441792, 720878, 65523, 1441792, 720878, 65522, 1441792, 720878, 65521, 1441792, 720878, 65520, 1441792, 720878, 65519, 1441792, 720878, 65518, 1441792, 720878, 65517, 1441792, 720878, 65516, 1441792, 720878, 65515, 1441792, 720878, 65514, 1441792, 720878, 65513, 1441792, 720878, 65512, 1441792, 720878, 65511, 1441792, 720878, 65510, 1441792, 720878, 65509, 1441792, 655410, 25, 1048576)
 }
-metadata/_editor_floor_ = Vector3(0, 3, 0)
+metadata/_editor_floor_ = Vector3(0, 10, 0)
 
-[node name="GridMap_Fence_03" type="GridMap" parent="GridMap_Fence/GridMap_Fence1"]
-mesh_library = ExtResource("12_0wsit")
-cell_size = Vector3(2.012, 1.57, 3.306)
+[node name="SolidBox" type="Node3D" parent="."]
+
+[node name="GridMapSolidBax_01" type="GridMap" parent="SolidBox"]
+mesh_library = ExtResource("3_d784a")
+cell_size = Vector3(2.212, 1.95, 2.305)
 data = {
-"cells": PackedInt32Array(262033, 65530, 1048576, 262033, 65531, 1048576, 262033, 65532, 1048576, 262033, 65533, 1048576, 262033, 65534, 1048576, 262033, 65535, 1048576, 262033, 0, 1048576, 262033, 1, 1048576, 262033, 2, 1048576, 262033, 3, 1048576, 262033, 4, 1048576, 262033, 5, 1048576, 262033, 6, 1048576, 262033, 7, 1048576, 262033, 8, 1048576, 262033, 9, 1048576, 262033, 10, 1048576, 262033, 11, 1048576, 262033, 12, 1048576, 262033, 13, 1048576, 262033, 14, 1048576, 262033, 15, 1048576, 262033, 16, 1048576, 262033, 17, 1048576, 262033, 18, 1048576, 262033, 19, 1048576, 262033, 20, 1048576, 262033, 21, 1048576, 262033, 22, 1048576, 262033, 23, 1048576, 262033, 24, 1048576, 262033, 25, 1048576, 262033, 26, 1048576, 262033, 27, 1048576, 262033, 28, 1048576, 262033, 29, 1048576, 262033, 30, 1048576, 262033, 31, 1048576, 262033, 32, 1048576, 262033, 33, 1048576, 262033, 34, 1048576, 262033, 35, 1048576, 262033, 36, 1048576, 262033, 37, 1048576, 262033, 38, 1048576, 262033, 39, 1048576, 262033, 40, 1048576, 262033, 41, 1048576, 262033, 42, 1048576, 262033, 43, 1048576, 262033, 44, 1048576, 262033, 45, 1048576, 262033, 46, 1048576, 262033, 47, 1048576, 262033, 48, 1048576, 262033, 49, 1048576, 262033, 50, 1048576, 262033, 51, 1048576, 262033, 52, 1048576, 262033, 53, 1048576, 262033, 54, 1048576)
+"cells": PackedInt32Array(655403, 6, 655360, 655402, 6, 655360, 655401, 6, 655360, 655400, 6, 655360, 655399, 6, 655360, 655398, 6, 655360, 655397, 6, 655360, 655396, 6, 655360, 655395, 6, 655360, 655394, 6, 655360, 655393, 6, 655360, 655392, 6, 655360, 655391, 6, 655360, 655390, 6, 655360, 655389, 6, 655360, 655388, 6, 655360, 655387, 6, 655360, 655386, 6, 655360, 720886, 0, 655360, 720887, 0, 655360, 720888, 0, 655360, 720889, 0, 655360, 720890, 0, 655360, 720891, 0, 655360, 720892, 0, 655360, 720893, 0, 655360, 720894, 0, 655360, 720895, 0, 655360, 655360, 0, 655360, 655361, 0, 655360, 655363, 0, 655360, 655362, 0, 655360, 720885, 0, 655360, 720884, 0, 655360, 720883, 0, 655360, 720882, 0, 655360, 655379, 0, 655360, 655380, 0, 655360, 655381, 0, 655360, 655382, 0, 655360, 655383, 0, 655360, 655384, 0, 655360, 655385, 0, 655360, 655386, 0, 655360, 655387, 0, 655360, 655388, 0, 655360, 655389, 0, 655360, 655390, 0, 655360, 655391, 0, 655360, 655392, 0, 655360, 655393, 0, 655360, 655404, 0, 655360, 655403, 42, 655360, 655402, 42, 655360, 655401, 42, 655360, 655400, 42, 655360, 655399, 42, 655360, 655398, 42, 655360, 655397, 42, 655360, 655396, 42, 655360, 655395, 42, 655360, 655394, 42, 655360, 655393, 42, 655360, 655392, 42, 655360, 655391, 42, 655360, 655390, 42, 655360, 655389, 42, 655360, 655388, 42, 655360, 655387, 42, 655360, 655386, 42, 655360, 655385, 42, 655360, 655384, 42, 655360, 655383, 42, 655360, 655382, 42, 655360, 655381, 42, 655360, 655380, 42, 655360, 655379, 42, 655360, 655378, 42, 655360, 655371, 65498, 1048576, 655370, 65498, 1048576, 655369, 65498, 1048576, 655368, 65498, 1048576, 655367, 65498, 1048576, 655366, 65498, 1048576, 655365, 65498, 1048576, 655364, 65498, 1048576, 655362, 65498, 1048576, 655361, 65498, 1048576, 655360, 65498, 1048576, 720895, 65498, 1048576, 720894, 65498, 1048576, 720893, 65498, 1048576, 720892, 65498, 1048576, 720891, 65498, 1048576, 720890, 65498, 1048576, 720889, 65498, 1048576, 720888, 65498, 1048576, 720887, 65498, 1048576, 720886, 65498, 1048576, 720885, 65498, 1048576, 720884, 65498, 1048576, 720883, 65498, 1048576, 655403, 65498, 1048576, 655402, 65498, 1048576, 655401, 65498, 1048576, 655400, 65498, 1048576, 655399, 65498, 1048576, 655398, 65498, 1048576, 655397, 65498, 1048576, 655396, 65498, 1048576, 655395, 65498, 1048576, 655394, 65498, 1048576, 655393, 65498, 1048576, 655392, 65498, 1048576, 655391, 65498, 1048576, 655390, 65498, 1048576, 655389, 65498, 1048576, 655388, 65498, 1048576, 655387, 65498, 1048576, 655386, 65498, 1048576, 655385, 65498, 1048576, 655384, 65498, 1048576, 655381, 65498, 1048576, 655383, 65498, 1048576, 655380, 65498, 1048576, 655379, 65498, 1048576, 655363, 65498, 1048576, 655378, 0, 1048576, 655372, 6, 1048576, 655371, 6, 1048576, 655370, 6, 1048576, 655368, 6, 1048576, 655369, 6, 1048576, 655367, 6, 1048576, 655366, 6, 1048576, 655365, 6, 1048576, 655364, 6, 1048576, 655363, 6, 1048576, 655362, 6, 1048576, 655361, 6, 1048576, 655360, 6, 1048576, 720895, 6, 1048576, 720894, 6, 1048576, 720893, 6, 1048576, 720892, 6, 1048576, 720891, 6, 1048576, 720890, 6, 1048576, 720888, 6, 1048576, 720889, 6, 1048576, 720887, 6, 1048576, 720885, 6, 1048576, 720886, 6, 1048576, 720884, 6, 1048576, 720883, 6, 1048576, 655404, 41, 1048576, 655382, 65498, 1048576, 655372, 65498, 1048576, 720883, 42, 1048576, 720884, 42, 1048576, 720885, 42, 1048576, 720886, 42, 1048576, 720887, 42, 1048576, 720888, 42, 1048576, 720889, 42, 1048576, 720890, 42, 1048576, 720891, 42, 1048576, 720892, 42, 1048576, 720893, 42, 1048576, 720894, 42, 1048576, 720895, 42, 1048576, 655360, 42, 1048576, 655361, 42, 1048576, 655362, 42, 1048576, 655363, 42, 1048576, 655364, 42, 1048576, 655365, 42, 1048576, 655366, 42, 1048576, 655367, 42, 1048576, 655368, 42, 1048576, 655369, 42, 1048576, 655370, 42, 1048576, 655371, 42, 1048576)
 }
-metadata/_editor_floor_ = Vector3(0, 3, 0)
+metadata/_editor_floor_ = Vector3(0, 10, 0)
 
-[node name="GridMap_Fence2" type="Node3D" parent="GridMap_Fence"]
-
-[node name="GridMap_Fence-01" type="GridMap" parent="GridMap_Fence/GridMap_Fence2"]
+[node name="GridMapSolidBox_02" type="GridMap" parent="SolidBox"]
+mesh_library = ExtResource("3_d784a")
+cell_size = Vector3(1.914, 1.955, 2.255)
 data = {
-"cells": PackedInt32Array(65347, 85, 1048577)
+"cells": PackedInt32Array(720880, 8, 655360, 720880, 9, 655360, 720880, 10, 655360, 720880, 7, 655360, 720880, 11, 655360, 720880, 12, 655360, 720880, 13, 655360, 720880, 14, 655360, 720880, 15, 655360, 720880, 16, 655360, 720880, 17, 655360, 720880, 18, 655360, 720880, 19, 655360, 720880, 20, 655360, 720880, 21, 655360, 720880, 22, 655360, 720880, 23, 655360, 720880, 24, 655360, 720880, 25, 655360, 720880, 26, 655360, 720880, 27, 655360, 720880, 28, 655360, 720880, 29, 655360, 720880, 30, 655360, 720880, 31, 655360, 720880, 32, 655360, 720880, 33, 655360, 720880, 34, 655360, 720880, 35, 655360, 720880, 36, 655360, 720880, 37, 655360, 720880, 38, 655360, 720880, 39, 655360, 720880, 40, 655360, 720880, 41, 655360, 720880, 42, 655360, 655374, 14, 655360, 655374, 15, 655360, 655374, 16, 655360, 655374, 17, 655360, 655374, 18, 655360, 655374, 19, 655360, 655374, 20, 655360, 655374, 21, 655360, 655374, 22, 655360, 655374, 23, 655360, 655374, 24, 655360, 655374, 25, 655360, 655374, 26, 655360, 655374, 27, 655360, 655374, 28, 655360, 655374, 29, 655360, 655374, 30, 655360, 655374, 31, 655360, 655374, 32, 655360, 655374, 33, 655360, 655374, 34, 655360, 655374, 35, 655360, 655374, 36, 655360, 655374, 37, 655360, 655374, 38, 655360, 655374, 39, 655360, 655374, 40, 655360, 655374, 41, 655360, 655374, 42, 655360, 655411, 41, 655360, 655411, 40, 655360, 655411, 39, 655360, 655411, 38, 655360, 655411, 37, 655360, 655411, 36, 655360, 655411, 35, 655360, 655411, 34, 655360, 655411, 33, 655360, 655411, 32, 655360, 655411, 31, 655360, 655411, 30, 655360, 655411, 29, 655360, 655411, 28, 655360, 655411, 27, 655360, 655411, 26, 655360, 655411, 25, 655360, 655411, 24, 655360, 655411, 23, 655360, 655411, 22, 655360, 655411, 21, 655360, 655411, 20, 655360, 655411, 19, 655360, 655411, 18, 655360, 655411, 17, 655360, 655411, 16, 655360, 655411, 15, 655360, 655411, 13, 655360, 655411, 14, 655360, 655411, 12, 655360, 655411, 11, 655360, 655411, 10, 655360, 655411, 9, 655360, 655411, 8, 655360, 655411, 7, 655360, 655374, 65535, 655360, 655374, 65534, 655360, 655374, 65533, 655360, 655374, 65532, 655360, 655374, 65531, 655360, 655374, 65530, 655360, 655374, 65529, 655360, 655374, 65528, 655360, 655374, 65527, 655360, 655374, 65526, 655360, 655374, 65525, 655360, 655374, 65524, 655360, 655374, 65523, 655360, 655374, 65522, 655360, 655374, 65521, 655360, 655374, 65520, 655360, 655374, 65519, 655360, 655374, 65518, 655360, 655374, 65517, 655360, 655374, 65516, 655360, 655374, 65515, 655360, 655374, 65514, 655360, 655374, 65513, 655360, 655374, 65512, 655360, 655374, 65511, 655360, 720880, 65530, 655360, 720880, 65529, 655360, 720880, 65528, 655360, 720880, 65527, 655360, 720880, 65526, 655360, 720880, 65525, 655360, 720880, 65524, 655360, 720880, 65523, 655360, 720880, 65522, 655360, 720880, 65519, 655360, 720880, 65518, 655360, 720880, 65517, 655360, 720880, 65516, 655360, 720880, 65515, 655360, 720880, 65514, 655360, 720880, 65513, 655360, 720880, 65512, 655360, 720880, 65511, 655360, 720880, 65510, 655360, 720880, 65509, 655360, 720880, 65508, 655360, 720880, 65507, 655360, 720880, 65506, 655360, 720880, 65505, 655360, 720880, 65504, 655360, 720880, 65503, 655360, 720880, 65502, 655360, 720880, 65501, 655360, 720880, 65500, 655360, 720880, 65521, 655360, 720880, 65520, 655360, 720880, 65531, 655360, 720880, 65532, 655360, 720880, 65533, 655360, 720880, 65534, 655360, 720880, 65535, 655360, 655411, 65535, 655360, 655411, 65534, 655360, 655411, 65533, 655360, 655411, 65532, 655360, 655411, 65531, 655360, 655411, 65530, 655360, 655411, 65529, 655360, 655411, 65528, 655360, 655411, 65527, 655360, 655411, 65526, 655360, 655411, 65525, 655360, 655411, 65524, 655360, 655411, 65523, 655360, 655411, 65522, 655360, 655411, 65521, 655360, 655411, 65520, 655360, 655411, 65519, 655360, 655411, 65518, 655360, 655411, 65517, 655360, 655411, 65516, 655360, 655411, 65515, 655360, 655411, 65514, 655360, 655411, 65513, 655360, 655411, 65512, 655360, 655411, 65511, 655360, 655411, 65510, 655360, 655411, 65509, 655360, 655411, 65508, 655360, 655411, 65507, 655360, 655411, 65506, 655360, 655411, 65505, 655360, 655411, 65504, 655360, 655411, 65503, 655360, 655411, 65501, 655360, 655411, 65502, 655360, 655411, 65500, 655360, 655411, 65499, 655360, 655381, 30, 655360, 655381, 29, 655360, 655381, 28, 655360, 655381, 27, 655360, 655381, 26, 655360, 655381, 25, 655360, 655381, 24, 655360, 655381, 23, 655360, 655381, 22, 655360, 655381, 21, 655360, 655381, 20, 655360, 655381, 19, 655360, 655381, 18, 655360, 655381, 17, 655360, 655381, 16, 655360, 655381, 15, 655360, 655381, 14, 655360, 655381, 13, 655360, 655381, 12, 655360, 655381, 11, 655360, 655381, 10, 655360, 655381, 9, 655360, 655381, 8, 655360, 655381, 6, 655360, 655381, 7, 655360, 655381, 65502, 1048576, 655381, 65503, 1048576, 655381, 65504, 1048576, 655381, 65505, 1048576, 655381, 65506, 1048576, 655381, 65507, 1048576, 655381, 65508, 1048576, 655381, 65509, 1048576, 655381, 65510, 1048576, 655381, 65511, 1048576, 655381, 65512, 1048576, 655381, 65513, 1048576, 655381, 65514, 1048576, 655381, 65515, 1048576, 655381, 65516, 1048576, 655381, 65517, 1048576, 655381, 65518, 1048576, 655381, 65519, 1048576, 655381, 65520, 1048576, 655381, 65521, 1048576, 655381, 65522, 1048576, 655381, 65523, 1048576, 655381, 65524, 1048576, 655381, 65525, 1048576, 655381, 65526, 1048576, 655381, 65527, 1048576, 655374, 0, 1048576, 655411, 65498, 1048576, 720880, 65499, 1048576, 720880, 65498, 1048576, 655381, 65501, 1048576, 655381, 65500, 1048576, 655381, 65499, 1048576, 655381, 65498, 1048576)
 }
+metadata/_editor_floor_ = Vector3(0, 10, 0)
+
+[node name="Road" type="Node3D" parent="."]
+
+[node name="GridMapRoad_01" type="GridMap" parent="Road"]
+mesh_library = ExtResource("8_7vsyy")
+cell_size = Vector3(6.108, 1.943, 2.001)
+data = {
+"cells": PackedInt32Array(720889, 2, 1048576, 720890, 2, 1048576, 720891, 2, 1048576, 720892, 2, 1048576, 720893, 2, 1048576, 720894, 2, 1048576, 720895, 2, 1048576, 655360, 2, 1048576, 655361, 2, 1048576, 655362, 2, 1048576, 655363, 2, 1048576, 655367, 2, 1441792, 655368, 2, 1441792, 655369, 2, 1441792, 655370, 2, 1441792, 720889, 5, 1441792, 720890, 5, 1441792, 720891, 5, 1441792, 720892, 5, 1441792, 720893, 5, 1441792, 720894, 5, 1441792, 720895, 5, 1441792, 655360, 5, 1441792, 655361, 5, 1441792, 655362, 5, 1441792, 655363, 5, 1441792, 655364, 5, 1441792, 655365, 5, 1441792, 655366, 5, 1441792, 655367, 5, 1441792, 655368, 5, 1441792, 655369, 5, 1441792, 655370, 5, 1441792, 655371, 2, 1441792, 655372, 2, 1441792, 655373, 2, 1441792, 655374, 2, 1441792, 655375, 2, 1441792, 655376, 2, 1441792, 655377, 2, 1441792, 655371, 5, 1441792, 655372, 5, 1441792, 655373, 5, 1441792, 655374, 5, 1441792, 655375, 5, 1441792, 655376, 5, 1441792, 655377, 5, 1441792, 655378, 5, 1441792, 655378, 2, 1441792, 655364, 2, 1048576, 655365, 2, 1048576, 655366, 2, 1048576)
+}
+metadata/_editor_floor_ = Vector3(0, 10, 0)
+
+[node name="GridMapRoad_02" type="GridMap" parent="Road"]
+mesh_library = ExtResource("8_7vsyy")
+cell_size = Vector3(2.027, 1.945, 6.096)
+data = {
+"cells": PackedInt32Array(655375, 17, 655360, 655378, 17, 655360, 655378, 16, 655360, 655378, 15, 655360, 655378, 14, 655360, 655378, 12, 655360, 655378, 13, 655360, 655375, 16, 655360, 655375, 15, 655360, 655375, 14, 655360, 655375, 12, 655360, 655375, 13, 655360, 655375, 11, 655360, 655375, 9, 655360, 655375, 10, 655360, 655375, 7, 655360, 655375, 8, 655360, 655375, 6, 655360, 655375, 4, 655360, 655375, 5, 655360, 655378, 11, 655360, 655378, 10, 655360, 655378, 9, 655360, 655378, 8, 655360, 655378, 7, 655360, 655378, 6, 655360, 655378, 5, 655360, 655378, 4, 655360, 655378, 3, 655360, 655375, 3, 655360, 655375, 65521, 655360, 655378, 65521, 655360, 655378, 65522, 655360, 655378, 65523, 655360, 655378, 65524, 655360, 655378, 65525, 655360, 655378, 65526, 655360, 655378, 65527, 655360, 655378, 65528, 655360, 655378, 65529, 655360, 655378, 65530, 655360, 655378, 65531, 655360, 655378, 65532, 655360, 655378, 65533, 655360, 655378, 65534, 655360, 655378, 65535, 655360, 655375, 65535, 655360, 655375, 65534, 655360, 655375, 65533, 655360, 655375, 65532, 655360, 655375, 65531, 655360, 655375, 65530, 655360, 655375, 65529, 655360, 655375, 65528, 655360, 655375, 65527, 655360, 655375, 65526, 655360, 655375, 65525, 655360, 655375, 65524, 655360, 655375, 65523, 655360, 655375, 65522, 655360, 655375, 65520, 655360, 655378, 65520, 655360, 655375, 2, 655360, 655378, 2, 655360, 655378, 0, 655360, 655375, 0, 655360)
+}
+metadata/_editor_floor_ = Vector3(0, 10, 0)
+
+[node name="MilitaryBase" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6165, -5.69962, 0)
+
+[node name="WatchTower" type="Node3D" parent="MilitaryBase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.4812, 0)
+
+[node name="SM_WatchTower_01" parent="MilitaryBase/WatchTower" instance=ExtResource("6_7gbll")]
+transform = Transform3D(0.670375, 0, 0.742023, 0, 1, 0, -0.742023, 0, 0.670375, 76.664, 5.67153, -83.1541)
+
+[node name="SM_WatchTower_02" parent="MilitaryBase/WatchTower" instance=ExtResource("6_7gbll")]
+transform = Transform3D(-0.810779, 0, 0.585355, 0, 1, 0, -0.585355, 0, -0.810779, -41.8496, 5.57352, -82.3378)
+
+[node name="SM_WatchTower_03" parent="MilitaryBase/WatchTower" instance=ExtResource("6_7gbll")]
+transform = Transform3D(-0.747636, 0, -0.664109, 0, 1, 0, 0.664109, 0, -0.747636, -41.653, 5.67153, 89.1369)
+
+[node name="SM_WatchTower_04" parent="MilitaryBase/WatchTower" instance=ExtResource("6_7gbll")]
+transform = Transform3D(0.847761, 0, -0.530378, 0, 1, 0, 0.530378, 0, 0.847761, 77.226, 5.67153, 89.1369)
+
+[node name="Barrack2" type="Node3D" parent="MilitaryBase"]
+transform = Transform3D(0.999973, 0, 0.00731286, 0, 1, 0, -0.00731286, 0, 0.999973, 83.5766, 0, -75.8368)
+
+[node name="SM_Barrack-01" parent="MilitaryBase/Barrack2" instance=ExtResource("7_bpvpl")]
+transform = Transform3D(0.00404917, 0, -0.999992, 0, 1, 0, 0.999992, 0, 0.00404917, -22.4607, 26.2898, 9.92373)
+
+[node name="SM_Barrack_02" parent="MilitaryBase/Barrack2" instance=ExtResource("7_bpvpl")]
+transform = Transform3D(0.00404917, 0, -0.999992, 0, 1, 0, 0.999992, 0, 0.00404917, -21.728, 26.1077, 31.8467)
+
+[node name="SM_Barrack_03" parent="MilitaryBase/Barrack2" instance=ExtResource("7_bpvpl")]
+transform = Transform3D(0.00404917, 0, -0.999992, 0, 1, 0, 0.999992, 0, 0.00404917, -20.4086, 26.0698, 54.2053)
+
+[node name="TunnelTent" type="Node3D" parent="MilitaryBase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.84366, 21.3014, 0)
+
+[node name="SM_TunnelTent_01" parent="MilitaryBase/TunnelTent" instance=ExtResource("8_jht02")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -30.2019, 4.70877, -17.1901)
+
+[node name="SM_TunnelTent_02" parent="MilitaryBase/TunnelTent" instance=ExtResource("8_jht02")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -29.5727, 4.84065, -68.3204)
+
+[node name="ShippingContainer" type="Node3D" parent="MilitaryBase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.84366, 24.2035, 0)
+
+[node name="SM_ShippingContainer_01" parent="MilitaryBase/ShippingContainer" instance=ExtResource("8_t4tvt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -40.4629, 2.01922, 20.053)
+
+[node name="SM_ShippingContainer_04" parent="MilitaryBase/ShippingContainer" instance=ExtResource("8_t4tvt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -28.2016, 2.01922, 20.053)
+
+[node name="SM_ShippingContainer_05" parent="MilitaryBase/ShippingContainer" instance=ExtResource("8_t4tvt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -28.2016, 2.01922, 28.2478)
+
+[node name="SM_ShippingContainer_06" parent="MilitaryBase/ShippingContainer" instance=ExtResource("8_t4tvt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -28.2016, 2.01922, 35.2213)
+
+[node name="SM_ShippingContainer_02" parent="MilitaryBase/ShippingContainer" instance=ExtResource("8_t4tvt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -40.3025, 2.00709, 28.3498)
+
+[node name="SM_ShippingContainer_03" parent="MilitaryBase/ShippingContainer" instance=ExtResource("8_t4tvt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -40.6562, 1.60061, 35.7754)
+
+[node name="SandBagBarrier" type="Node3D" parent="MilitaryBase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.5973, 0)
+
+[node name="SM_SandBagBarrier_01" parent="MilitaryBase/SandBagBarrier" instance=ExtResource("7_rljq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75.1881, 5.35687, -58.2204)
+
+[node name="SM_SandBagBarrier_03" parent="MilitaryBase/SandBagBarrier" instance=ExtResource("7_rljq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.2271, 5.35687, -53.9702)
+
+[node name="SM_SandBagBarrier_04" parent="MilitaryBase/SandBagBarrier" instance=ExtResource("7_rljq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.2271, 5.35687, -63.6909)
+
+[node name="SM_SandBagBarrier_02" parent="MilitaryBase/SandBagBarrier" instance=ExtResource("7_rljq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75.1881, 5.62242, -31.8191)
+
+[node name="SM_SandBagBarrier_05" parent="MilitaryBase/SandBagBarrier" instance=ExtResource("7_rljq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76.6481, 5.62242, -38.5322)
+
+[node name="SM_SandBagBarrier_06" parent="MilitaryBase/SandBagBarrier" instance=ExtResource("7_rljq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76.6481, 5.62242, -26.9187)
+
+[node name="OilTank" type="Node3D" parent="MilitaryBase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.76157, 0)
+
+[node name="SM_OilTank_01" parent="MilitaryBase/OilTank" instance=ExtResource("14_plngd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.6139, 16.5019, 55.2897)
+
+[node name="SM_OilTank_02" parent="MilitaryBase/OilTank" instance=ExtResource("14_plngd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.7598, 16.5019, 55.2897)
+
+[node name="SM_OilTank_03" parent="MilitaryBase/OilTank" instance=ExtResource("14_plngd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8867, 16.5019, 55.2897)
+
+[node name="SM_OilTank_04" parent="MilitaryBase/OilTank" instance=ExtResource("14_plngd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8867, 16.5019, 65.3276)
+
+[node name="SM_OilTank_05" parent="MilitaryBase/OilTank" instance=ExtResource("14_plngd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.3002, 16.5019, 65.3277)
+
+[node name="SM_OilTank_06" parent="MilitaryBase/OilTank" instance=ExtResource("14_plngd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.9039, 16.5019, 65.3277)
+
+[node name="Vehicles" type="Node3D" parent="MilitaryBase"]
+
+[node name="SM_Truck_01" parent="MilitaryBase/Vehicles" instance=ExtResource("14_3wyvs")]
+transform = Transform3D(0.0374285, 0, -0.999301, 0, 1, 0, 0.999301, 0, 0.0374285, -34.6713, 26.0109, -56.115)
+
+[node name="SM_Truck_05" parent="MilitaryBase/Vehicles" instance=ExtResource("14_3wyvs")]
+transform = Transform3D(0.0374285, 0, -0.999301, 0, 1, 0, 0.999301, 0, 0.0374285, -34.6713, 26.0109, -51.2259)
+
+[node name="SM_Truck_02" parent="MilitaryBase/Vehicles" instance=ExtResource("14_3wyvs")]
+transform = Transform3D(0.0374285, 0, -0.999301, 0, 1, 0, 0.999301, 0, 0.0374285, -34.6713, 26.0109, -45.4282)
+
+[node name="SM_Truck_03" parent="MilitaryBase/Vehicles" instance=ExtResource("14_3wyvs")]
+transform = Transform3D(0.0374285, 0, -0.999302, 0, 1, 0, 0.999302, 0, 0.0374285, -34.6713, 26.0109, -41.255)
+
+[node name="SM_Truck_04" parent="MilitaryBase/Vehicles" instance=ExtResource("14_3wyvs")]
+transform = Transform3D(0.0374285, 0, -0.999302, 0, 1, 0, 0.999302, 0, 0.0374285, -34.6713, 26.0109, -36.7553)
+
+[node name="SM_Tank_01" parent="MilitaryBase/Vehicles" instance=ExtResource("15_r8f2d")]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -21.3117, 26.0964, -55.0109)
+
+[node name="SM_Tank_02" parent="MilitaryBase/Vehicles" instance=ExtResource("15_r8f2d")]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -21.3117, 26.0964, -50.9246)
+
+[node name="SM_Tank_03" parent="MilitaryBase/Vehicles" instance=ExtResource("15_r8f2d")]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -21.3117, 26.0964, -46.6049)
+
+[node name="SM_Tank_04" parent="MilitaryBase/Vehicles" instance=ExtResource("15_r8f2d")]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -21.3117, 26.0964, -42.617)
+
+[node name="SM_Tank_05" parent="MilitaryBase/Vehicles" instance=ExtResource("15_r8f2d")]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, -21.3117, 26.0964, -38.516)
+
+[node name="SM_Jeep_01" parent="MilitaryBase/Vehicles" instance=ExtResource("16_w68w8")]
+transform = Transform3D(0.997766, 0, 0.0668138, 0, 1, 0, -0.0668138, 0, 0.997766, 28.9641, 27.6061, -79.4245)
+
+[node name="SM_Jeep_02" parent="MilitaryBase/Vehicles" instance=ExtResource("16_w68w8")]
+transform = Transform3D(0.997766, 0, 0.0668138, 0, 1, 0, -0.0668138, 0, 0.997766, 32.0779, 27.6061, -79.4246)
+
+[node name="SM_Jeep_03" parent="MilitaryBase/Vehicles" instance=ExtResource("16_w68w8")]
+transform = Transform3D(0.997766, 0, 0.0668138, 0, 1, 0, -0.0668138, 0, 0.997766, 34.7893, 27.6061, -79.4246)
+
+[node name="Tent" type="Node3D" parent="MilitaryBase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104.174, 0, 0)
+
+[node name="Barrel" type="Node3D" parent="MilitaryBase"]
+
+[node name="ConcreteBarrier" type="Node3D" parent="MilitaryBase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 33.3028, 0)
+
+[node name="SM_ConcreteBarrier_01" parent="MilitaryBase/ConcreteBarrier" instance=ExtResource("16_3e31i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4805, -7.19422, 14.7138)
+
+[node name="SM_ConcreteBarrier_02" parent="MilitaryBase/ConcreteBarrier" instance=ExtResource("16_3e31i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.632, -7.19695, 14.7114)
+
+[node name="SM_ConcreteBarrier_03" parent="MilitaryBase/ConcreteBarrier" instance=ExtResource("16_3e31i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7695, -7.19894, 14.7055)
+
+[node name="SM_ConcreteBarrier_04" parent="MilitaryBase/ConcreteBarrier" instance=ExtResource("16_3e31i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.8915, -7.20166, 14.7053)
+
+[node name="SM_ConcreteBarrier_05" parent="MilitaryBase/ConcreteBarrier" instance=ExtResource("16_3e31i")]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.588, -7.24646, 15.4732)
+
+[node name="ConcreteBarrier2" type="Node3D" parent="MilitaryBase"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9.82701, 33.3029, 25.6786)
+
+[node name="SM_ConcreteBarrier_01" parent="MilitaryBase/ConcreteBarrier2" instance=ExtResource("16_3e31i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4805, -7.19422, 14.7138)
+
+[node name="SM_ConcreteBarrier_02" parent="MilitaryBase/ConcreteBarrier2" instance=ExtResource("16_3e31i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.632, -7.19695, 14.7114)
+
+[node name="SM_ConcreteBarrier_03" parent="MilitaryBase/ConcreteBarrier2" instance=ExtResource("16_3e31i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7695, -7.19894, 14.7055)
+
+[node name="SM_ConcreteBarrier_04" parent="MilitaryBase/ConcreteBarrier2" instance=ExtResource("16_3e31i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.8915, -7.20166, 14.7053)
+
+[node name="SM_ConcreteBarrier_05" parent="MilitaryBase/ConcreteBarrier2" instance=ExtResource("16_3e31i")]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.588, -7.24646, 15.4732)
+
+[node name="ConcreteBarrier3" type="Node3D" parent="MilitaryBase"]
+transform = Transform3D(-1, 0, 8.74229e-08, 0, 1, 0, -8.74229e-08, 0, -1, 35.9976, 33.3029, 15.9295)
+
+[node name="SM_ConcreteBarrier_01" parent="MilitaryBase/ConcreteBarrier3" instance=ExtResource("16_3e31i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4805, -7.19422, 14.7138)
+
+[node name="SM_ConcreteBarrier_02" parent="MilitaryBase/ConcreteBarrier3" instance=ExtResource("16_3e31i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.632, -7.19695, 14.7114)
+
+[node name="SM_ConcreteBarrier_03" parent="MilitaryBase/ConcreteBarrier3" instance=ExtResource("16_3e31i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7695, -7.19894, 14.7055)
+
+[node name="SM_ConcreteBarrier_04" parent="MilitaryBase/ConcreteBarrier3" instance=ExtResource("16_3e31i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.8915, -7.20166, 14.7053)
+
+[node name="SM_ConcreteBarrier_05" parent="MilitaryBase/ConcreteBarrier3" instance=ExtResource("16_3e31i")]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.588, -7.24646, 15.4732)
+
+[node name="ConcreteBarrier4" type="Node3D" parent="MilitaryBase"]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37115e-08, 26.2114, 33.303, -10.0186)
+
+[node name="SM_ConcreteBarrier_01" parent="MilitaryBase/ConcreteBarrier4" instance=ExtResource("16_3e31i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4805, -7.19422, 14.7138)
+
+[node name="SM_ConcreteBarrier_02" parent="MilitaryBase/ConcreteBarrier4" instance=ExtResource("16_3e31i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.632, -7.19695, 14.7114)
+
+[node name="SM_ConcreteBarrier_03" parent="MilitaryBase/ConcreteBarrier4" instance=ExtResource("16_3e31i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7695, -7.19894, 14.7055)
+
+[node name="SM_ConcreteBarrier_04" parent="MilitaryBase/ConcreteBarrier4" instance=ExtResource("16_3e31i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.8915, -7.20166, 14.7053)
+
+[node name="SM_ConcreteBarrier_05" parent="MilitaryBase/ConcreteBarrier4" instance=ExtResource("16_3e31i")]
+transform = Transform3D(-4.37115e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.588, -7.24646, 15.4732)

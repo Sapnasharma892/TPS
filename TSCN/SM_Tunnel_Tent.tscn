@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bjo54lpoxi745"]
+[gd_scene load_steps=2 format=3]
 
-[ext_resource type="ArrayMesh" uid="uid://dvf8hmxwdwfyq" path="res://TRES/TunnelTent/SM_Tunnel_Tent.tres" id="1_bf4la"]
+[ext_resource type="ArrayMesh" path="res://TRES/TunnelTent/SM_TunnelTent.tres" id="1_bf4la"]
 
 [node name="Node3d" type="Node3D"]
 

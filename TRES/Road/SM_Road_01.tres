@@ -1,33 +1,33 @@
-[gd_resource type="ArrayMesh" load_steps=3 format=3 uid="uid://d36q62e1bdic7"]
+[gd_resource type="ArrayMesh" load_steps=3 format=3 uid="uid://ghxn3brtxkce"]
 
-[ext_resource type="Material" uid="uid://qn0lepxjlpt8" path="res://Material/Road/MT_Road.material" id="1_7opsp"]
+[ext_resource type="Material" uid="uid://cudbcxwlwi8pt" path="res://Material/Road/MT_Road_01.material" id="1_sgegb"]
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_jujg2"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_ab8vo"]
 _surfaces = [{
-"aabb": AABB(-1, 0, -0.5, 2, 1e-05, 1.00001),
+"aabb": AABB(-3.048, 0, -3.048, 6.096, 1e-05, 6.09601),
 "format": 4097,
 "index_count": 6,
 "index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
 "name": "MT_Road",
 "primitive": 3,
 "vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 191)
+"vertex_data": PackedByteArray(110, 18, 67, 192, 0, 0, 0, 0, 110, 18, 67, 64, 110, 18, 67, 64, 0, 0, 0, 0, 110, 18, 67, 64, 110, 18, 67, 192, 0, 0, 0, 0, 110, 18, 67, 192, 110, 18, 67, 64, 0, 0, 0, 0, 110, 18, 67, 192)
 }]
 blend_shape_mode = 0
 
 [resource]
-resource_name = "Road_SM_Road"
+resource_name = "Road_v01_SM_Road"
 _surfaces = [{
-"aabb": AABB(-1, 0, -0.5, 2, 1e-05, 1.00001),
-"attribute_data": PackedByteArray(0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 128, 63, 0, 0, 0, 63),
-"format": 4119,
+"aabb": AABB(-3.048, 0, -3.048, 6.096, 1e-05, 6.09601),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 0, 0, 128, 63, 102, 190, 127, 63, 102, 190, 127, 63, 0, 0, 128, 63, 0, 0, 128, 63, 5, 52, 131, 58, 102, 190, 127, 63, 0, 0, 0, 0, 0, 0, 0, 0, 102, 190, 127, 63, 0, 52, 131, 58, 0, 0, 128, 63, 0, 0, 0, 0, 5, 52, 131, 58, 0, 52, 131, 58),
+"format": 4151,
 "index_count": 6,
 "index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
-"material": ExtResource("1_7opsp"),
+"material": ExtResource("1_sgegb"),
 "name": "MT_Road",
 "primitive": 3,
 "vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 0, 63, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 63, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 0, 191, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 191, 255, 127, 255, 255, 255, 255, 255, 191)
+"vertex_data": PackedByteArray(110, 18, 67, 192, 0, 0, 0, 0, 110, 18, 67, 64, 255, 127, 255, 255, 255, 255, 255, 191, 110, 18, 67, 64, 0, 0, 0, 0, 110, 18, 67, 64, 255, 127, 255, 255, 255, 255, 255, 191, 110, 18, 67, 192, 0, 0, 0, 0, 110, 18, 67, 192, 255, 127, 255, 255, 255, 255, 255, 191, 110, 18, 67, 64, 0, 0, 0, 0, 110, 18, 67, 192, 255, 127, 255, 255, 255, 255, 255, 191)
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_jujg2")
+shadow_mesh = SubResource("ArrayMesh_ab8vo")

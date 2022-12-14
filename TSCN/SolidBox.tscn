@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcbbysecpogfc"]
+
+[ext_resource type="ArrayMesh" uid="uid://h2pavor7ebcy" path="res://TRES/Fence/SM_SolidBox.tres" id="1_43gkr"]
+
+[node name="Node3d" type="Node3D"]
+
+[node name="SM_SolidBox" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_43gkr")

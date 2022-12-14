@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://douv0jqkasqx2"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="PackedScene" uid="uid://b6ewfobdxrqln" path="res://GLB/GameAssets/Glb - Copy/Glb/WaterTank_01.glb" id="1_gcc3d"]
+[ext_resource type="PackedScene" path="res://GLB/GameAssets/Assets/WaterTank_01.glb" id="1_gcc3d"]
 [ext_resource type="ArrayMesh" uid="uid://d2c1xr334jtwk" path="res://TRES/WaterTank/SM_WaterTank_01.tres" id="2_gxth1"]
 
 [node name="WaterTank_01" instance=ExtResource("1_gcc3d")]

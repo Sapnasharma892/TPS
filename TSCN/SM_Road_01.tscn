@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dhpq1s1k0nm3l"]
-
-[ext_resource type="ArrayMesh" uid="uid://d36q62e1bdic7" path="res://TRES/Road/SM_Road_01.tres" id="1_w315b"]
-
-[node name="Node3d" type="Node3D"]
-
-[node name="MeshInstance3d" type="MeshInstance3D" parent="."]
-mesh = ExtResource("1_w315b")

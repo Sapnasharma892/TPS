@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dwgu67q08jpd5"]
 
-[ext_resource type="ArrayMesh" path="res://TRES/Vehicles/Tank/SM_Tank.tres" id="1_eaa6b"]
+[ext_resource type="ArrayMesh" uid="uid://bk52ihonske46" path="res://TRES/Vehicles/Tank/SM_Tank.tres" id="1_eaa6b"]
 
 [node name="Node3d" type="Node3D"]
 

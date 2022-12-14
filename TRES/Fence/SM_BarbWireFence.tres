@@ -1,9 +1,9 @@
 [gd_resource type="ArrayMesh" load_steps=4 format=3 uid="uid://dwjmm7vah8nxt"]
 
-[ext_resource type="Material" uid="uid://lmc0takjhfub" path="res://Material/Fence/MT_MetalPillar.tres" id="1_dxk6x"]
+[ext_resource type="Material" uid="uid://bobye36bqvrxv" path="res://Material/Fence/MT_MetalPillar.tres" id="1_dxk6x"]
 [ext_resource type="Material" uid="uid://chf0nk3gh0ktl" path="res://Material/Fence/MT_Barbwire.tres" id="2_4j1eh"]
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_xo2nb"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_odhtq"]
 _surfaces = [{
 "aabb": AABB(-1.524, 0.00293351, -0.1, 3.04801, 3.65467, 0.580805),
 "format": 4097,
@@ -51,4 +51,4 @@ _surfaces = [{
 "vertex_data": PackedByteArray(177, 154, 172, 191, 202, 210, 81, 39, 158, 14, 143, 179, 255, 127, 255, 127, 0, 0, 255, 191, 177, 154, 172, 63, 202, 210, 81, 39, 158, 14, 143, 179, 255, 127, 255, 127, 0, 0, 255, 191, 177, 154, 172, 191, 40, 114, 71, 64, 156, 14, 143, 51, 255, 127, 190, 91, 0, 0, 255, 191, 177, 154, 172, 191, 40, 114, 71, 64, 156, 14, 143, 51, 255, 127, 190, 91, 0, 0, 255, 191, 177, 154, 172, 63, 40, 114, 71, 64, 156, 14, 143, 51, 255, 127, 190, 91, 0, 0, 255, 191, 177, 154, 172, 63, 40, 114, 71, 64, 156, 14, 143, 51, 255, 127, 190, 91, 0, 0, 255, 191, 177, 154, 172, 191, 153, 180, 98, 64, 251, 66, 204, 62, 255, 127, 23, 66, 0, 0, 255, 191, 177, 154, 172, 63, 153, 180, 98, 64, 251, 66, 204, 62, 255, 127, 23, 66, 0, 0, 255, 191)
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_xo2nb")
+shadow_mesh = SubResource("ArrayMesh_odhtq")
